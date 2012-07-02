@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Campaign Toolkit">
+
+ <object name="campaigntoolkit" meta_type="Filesystem Directory View"
+         directory="osha.campaigntoolkit:skins/campaigntoolkit"/>
+
+
+ <skin-path name="Campaign Toolkit" based-on="Plone Sunburst">
+  <layer name="campaigntoolkit"
+     insert-after="custom"/>
+ </skin-path>
+
+</object>

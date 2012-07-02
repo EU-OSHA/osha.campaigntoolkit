@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="osha.campaigntoolkit">
+
+    <browser:resourceDirectory
+        name="osha.campaigntoolkit.resources"
+        directory="resources"
+        />
+
+    <!--browser:page
+        for="*"
+        name="plone4-maintenance"
+        class=".maintenance.MaintenanceView"
+        permission="cmf.ManagePortal"
+        allowed_interface=".interfaces.IMaintenanceView"
+        /-->
+
+</configure>
