@@ -6,7 +6,7 @@
          directory="osha.campaigntoolkit:skins/campaigntoolkit"/>
 
 
- <skin-path name="Campaign Toolkit" based-on="Plone Sunburst">
+ <skin-path name="Campaign Toolkit" based-on="Sunburst Theme">
   <layer name="campaigntoolkit"
      insert-after="custom"/>
  </skin-path>

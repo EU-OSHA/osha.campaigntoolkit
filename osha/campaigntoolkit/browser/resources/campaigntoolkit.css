@@ -1,3 +1,49 @@
 body {
-    background-color: #eee;
+    background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/top.gif') repeat-x top left;
+    font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;    
+}
+
+h1 { font-size: 150%;}
+h2 { 
+    font-size: 120%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+}
+h3 { font-size: 100%;}
+
+#portal-logo {
+    background: url('http://oshawebdev00.fe.rzob.gocept.net/logoinner2.gif') no-repeat scroll right bottom white;
+    padding: 18px 30px 10px 10px;
+    float: left;
+    margin-top: 0;
+}
+#portal-top {
+    background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/headereurope.gif') no-repeat top right;
+}
+#portal-searchbox {
+    padding-top: 30px;
+}
+#visual-portal-wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+#portal-personaltools {
+    margin-right: 80px;
+}
+#content-views {
+    background-color: #1b259e;
+}
+#contentActionMenus {
+    background-color: #1b259e;    
+}
+#contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
+    background-color: #1b259e;
+}
+#edit-bar {
+    background-color: #1b259e;
+    border: 0.25em solid #1b259e;
 }
