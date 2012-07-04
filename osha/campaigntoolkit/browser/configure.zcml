@@ -9,12 +9,12 @@
         directory="resources"
         />
 
-    <!--browser:page
+    <browser:page
         for="*"
-        name="plone4-maintenance"
-        class=".maintenance.MaintenanceView"
-        permission="cmf.ManagePortal"
-        allowed_interface=".interfaces.IMaintenanceView"
-        /-->
+        name="homepage-view"
+        class=".homepage.HomepageView"
+        template="templates/homepage.pt"
+        permission="zope2.View"
+        />
 
 </configure>

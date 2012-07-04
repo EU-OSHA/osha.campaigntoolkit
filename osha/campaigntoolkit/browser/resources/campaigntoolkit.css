@@ -1,6 +1,7 @@
 body {
     background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/top.gif') repeat-x top left;
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
+    
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;    
@@ -23,6 +24,18 @@ h3 { font-size: 100%;}
 }
 #portal-top {
     background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/headereurope.gif') no-repeat top right;
+}
+#portal-header:after {
+    content: "Campaign Toolkit";
+    display:block;
+    text-align:right;
+    text-shadow: 0 1px 1px #fff;
+    margin-top: 122px;
+    color: #b1c6ff;
+    font-size: 22px;
+    font-family: Delicious;
+    font-style:italic;
+    @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); } 
 }
 #portal-searchbox {
     padding-top: 30px;
