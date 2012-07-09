@@ -90,13 +90,13 @@
         <h2>What you can expect</h2>
         <div class="in-focus" id="in-focus">
             <div id="infocus-1">
-                <img src="http://oshawebdev00.fe.rzob.gocept.net/en/in-focus/esener-european-survey-of-enterprises-on-new-and-emerging-risks/image_thumb">
+                <img src="++resource++osha.campaigntoolkit.resources/knot.jpg" width="130" title="Very likely copyrighted, not to use in production">
                 <h3>How to run a campaign</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <strong>Aliquam interdum pulvinar nibh</strong>. Maecenas eget nunc in justo rhoncus aliquam. Phasellus nisl mi, convallis ut, lacinia vel, sodales tempus, ante. Praesent eros. </p>
                 <p><a rel="nofollow" target="_blank" href="howto">More&hellip;</a></p>
             </div>
             <div id="infocus-2">
-                <img src="http://www.test.osha.syslab.com/en/practical-solutions/risk-assessment-tools/section-image.png">
+                <img src="++resource++osha.campaigntoolkit.resources/tools.jpg" width="150" title="Very likely copyrighted, not to use in production">
                 <h3>Tools</h3>
                 <p>Stet clita kasd gubergren, no sea takimata sanctus est <strong>Lorem ipsum dolor</strong> sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut <strong>labore et dolore magna aliquyam erat</strong>, sed diam voluptua</p>
                 <p><a rel="nofollow" target="_blank" href="howto">More&hellip;</a></p>
