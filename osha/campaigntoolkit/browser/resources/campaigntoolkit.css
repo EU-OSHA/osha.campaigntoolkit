@@ -1,14 +1,19 @@
 body {
     background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/top.gif') repeat-x top left;
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
-    
+
 }
+/*
+body.template-homepage-view div#portal-column-content{
+    width: 600px;
+}
+*/
 h1, h2, h3, h4, h5, h6 {
-    font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;    
+    font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
 }
 
 h1 { font-size: 150%;}
-h2 { 
+h2 {
     font-size: 120%;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -36,7 +41,7 @@ h3 { font-size: 100%;}
     font-size: 22px;
     font-family: Delicious, Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
     font-style:italic;
-    @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); } 
+    @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); }
 }
 #portal-searchbox {
     padding-top: 30px;
@@ -52,7 +57,7 @@ h3 { font-size: 100%;}
     background-color: #1b259e;
 }
 #contentActionMenus {
-    background-color: #1b259e;    
+    background-color: #1b259e;
 }
 #contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
     background-color: #1b259e;
@@ -64,4 +69,169 @@ h3 { font-size: 100%;}
 }
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid #1b259e;
+}
+
+
+/* styles new header 2012/05/01***********************/
+
+
+#content{
+
+    padding: 0 1em;
+
+}
+#intro{
+    border: 1px solid #003399;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    height: 140px;
+    background: url("++resource++osha.campaigntoolkit.resources/intro01.jpg") no-repeat top right;
+}
+
+#intro #intro_more{
+   font-size: 80%;
+}
+
+#intro h1{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #7f98ca;
+    font-style: italic;
+    font-size: 1.8em;
+    padding: 0 260px 0 0;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+}
+
+#agency_fullname{
+    text-transform: uppercase;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+}
+
+#highlights{
+    border: 1px solid #c5cbd8;
+    padding-bottom: 2.5em;
+    height: 320px;
+}
+
+#highlightsContainer{
+   padding-bottom: 20px;
+   background: url("++resource++osha.campaigntoolkit.resources/highlights.gif") no-repeat bottom center;
+   margin-bottom: 2em;
+}
+
+#highlights-content {
+    height: 270px;
+    margin-bottom: 20px;
+}
+
+#highlights h2, #in-focus-container h2{
+    background: #c5cbd8;
+    font-size: 0.85em;
+    border-bottom: 0;
+    padding: 0.5em 1em;
+    margin:0;
+}
+
+#highlights h3{
+    font-size: 1.4em;
+    color: #003399;
+    margin: 0;
+}
+#highlights-1, #highlights-2, #highlights-3, #highlights-4 {
+    padding: 1em;
+}
+
+#content #highlights-tabs {
+    list-style: none;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0.5em 0.5em 0;
+}
+
+#content #highlights-tabs li.ui-corner-top {
+    float: left;
+     margin: 0 0.5em 0 0;
+
+
+}
+#content #highlights-tabs li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow:2px 2px 2px #999;
+     background:#c5cbd8;
+    padding: 0.1em 0.8em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+#content #highlights-tabs li:hover a{
+    color: #003399;
+}
+
+#content #highlights-tabs li.ui-state-active {
+    background:#98a2b7;
+}
+
+#content #highlights-tabs a.current {
+    background:#98a2b7;
+}
+
+.teaserdate{
+    background: #e6e8ed;
+    padding: 0.2em 1em;
+    font-size: 0.8em;
+    color: #666;
+    display: inline-block;
+    margin: 1em 0;
+
+}
+
+
+#highlights img{
+    float: right;
+    margin: 1em 0 1em 1em;
+}
+
+#in-focus-container ul{
+    margin:0;
+    list-style: none;
+}
+
+#in-focus img{
+   float: right;
+   margin: 0 0 0.5em 0.5em;
+}
+
+#in-focus  {
+   font-size: 85%;
+   line-height: 160%;
+}
+
+#in-focus  h3{
+   margin: 0 0 0.5em 0;
+   color:#003399;
+}
+#in-focus div{
+    width: 48%;
+    margin: 2em 0 1em;
+}
+#highlight-1, #highlight-2, #highlight-3, #highlight-4{
+    width: 48%;
+    margin: 2em 0 1em;
+}
+
+#infocus-1, #infocus-3{
+    float: left;
+    padding-right: 2%;
+}
+
+#infocus-2, #infocus-4{
+    float: right;
+    padding-left: 2%;
 }
