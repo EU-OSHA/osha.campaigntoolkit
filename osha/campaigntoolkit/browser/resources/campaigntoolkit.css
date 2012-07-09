@@ -70,7 +70,28 @@ h3 { font-size: 100%;}
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid #1b259e;
 }
+#content .documentDescription, #content #description {
+    font-style:italic;
+    font-weight: normal;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.6em;
+    margin-bottom:2em;
+}
+/* toolstable */
 
+#toolstable {
+    clear: both;
+    
+}
+#toolstable tr td {
+    vertical-align: text-top;
+    width: 49%;
+}
+#toolstable li{
+    display: inline;
+    font-style: italic;
+}
+/* end toolstable */
 
 /* styles new header 2012/05/01***********************/
 
