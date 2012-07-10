@@ -7,6 +7,13 @@
     <script type="text/javascript"
             src="++resource++osha.campaigntoolkit.resources/highlights-carousel.js"
             language="javascript"></script>
+    <script type="text/javascript"
+            language="javascript">
+			$(function() {
+			    // setup ul.tabs to work as tabs for each div directly under div.panes
+			    $("ul.tabs").tabs("div.panes > div");
+			});
+	</script>
   </metal:javascript>
       <metal:css fill-slot='css_slot'>
       </metal:css>
@@ -16,13 +23,22 @@
 <div metal:fill-slot="main">
     <div id="mainContent">
 
-      <div id="intro">
-        <a href="about">
-          <p id="agency_fullname">EU-OSHA Campaign Toolkit</p>
-          <h1>Find information for creating and running a Health &amp; Safety Campaign</h1>
-          <p id="intro_more">More&hellip;</p>
-        </a>
-      </div>
+		<h1 tal:content="here/Title"></h1>
+		<p class="documentDescription" tal:content="here/Description" />
+
+<ul class="tabs">
+	<li><a href="#">Overview</a></li>
+	<li><a href="#">Examples</a></li>
+</ul>
+
+<div class="panes">
+	<div>	
+		<h2>How to use Posters</h2>	
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus venenatis augue, in tempus turpis rutrum lacinia. Vestibulum porttitor condimentum faucibus. Phasellus sit amet est sem. In lectus lacus, iaculis a ultricies et, sodales quis dui. Suspendisse elit eros, aliquam vitae accumsan eu, porta id nibh. Nullam interdum rhoncus sapien, in cursus arcu porta nec. Phasellus libero elit, pretium varius dictum quis, tempus vel lorem. Maecenas tincidunt tempor enim, ac tempor metus tempor ut. Etiam facilisis ultricies odio, ut malesuada magna sodales vulputate. Sed egestas egestas tortor eget consequat. Aliquam nisi libero, porta eget pretium id, dictum in nisl.</p>
+
+		<p>Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis. Maecenas in convallis lacus. Vivamus neque erat, commodo at vehicula quis, pharetra at libero. Etiam sodales gravida ante, vitae accumsan sapien faucibus sed. Integer volutpat ante sit amet tellus mattis imperdiet. Donec sit amet eros eget dui tristique vestibulum. Nunc nisl turpis, ultrices eu sollicitudin a, dictum at dolor. Sed ullamcorper rutrum euismod. In blandit vulputate enim, eget ornare purus fermentum vitae. Etiam orci mi, mollis eget euismod at, commodo non sapien. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+		<p>Praesent ac lobortis nunc. Curabitur at risus in magna vehicula convallis quis non metus. Nulla varius tellus porttitor nunc pellentesque molestie. Vivamus lacinia arcu sit amet velit sollicitudin malesuada sit amet quis est. Fusce ut orci dolor, nec vehicula nisl. Nulla elementum augue sit amet mauris pulvinar et ultricies massa molestie. Vestibulum rhoncus condimentum sodales.</p>
 
 
       <div id="highlightsContainer">
@@ -51,7 +67,7 @@
             <div id="highlights-3">
                 <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Leaflet on Worker Participation</a></h3>
                 <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="/osha/portal/en/teaser/workplace-violence-harassment-increase-Europe/image_mini">
+                <img src="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe/image_mini">
                 </a>
                 <p class="teaserdate">Added on 01.02.2011</p>
                 <p class="teaser_content"> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ...</p>
@@ -84,25 +100,25 @@
         </ul>
         </div>
       </div>
+	</div>
+
+	<div>
+		<ul id="examplelist">
+			<li><img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
+				Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
+			</li>
+			<li><img src="http://www.healthy-workplaces.eu/en/resources/promotion-materials/leaflet/en_hwc2012-13_leaflet.pdf/@@hw_get_thumb">
+				Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
+			</li>
+			
+		</ul>
+		
+	</div>
+
+</div>
 
 
-      <div id="in-focus-container">
-        <h2>What you can expect</h2>
-        <div class="in-focus" id="in-focus">
-            <div id="infocus-1">
-                <img src="http://oshawebdev00.fe.rzob.gocept.net/en/in-focus/esener-european-survey-of-enterprises-on-new-and-emerging-risks/image_thumb">
-                <h3>How to run a campaign</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <strong>Aliquam interdum pulvinar nibh</strong>. Maecenas eget nunc in justo rhoncus aliquam. Phasellus nisl mi, convallis ut, lacinia vel, sodales tempus, ante. Praesent eros. </p>
-                <p><a rel="nofollow" target="_blank" href="howto">More&hellip;</a></p>
-            </div>
-            <div id="infocus-2">
-                <img src="http://www.test.osha.syslab.com/en/practical-solutions/risk-assessment-tools/section-image.png">
-                <h3>Tools</h3>
-                <p>Stet clita kasd gubergren, no sea takimata sanctus est <strong>Lorem ipsum dolor</strong> sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut <strong>labore et dolore magna aliquyam erat</strong>, sed diam voluptua</p>
-                <p><a rel="nofollow" target="_blank" href="howto">More&hellip;</a></p>
-            </div>
-        </div>
-      </div>
+      
 
 
     </div>

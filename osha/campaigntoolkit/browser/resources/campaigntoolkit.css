@@ -15,9 +15,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 150%;}
 h2 {
     font-size: 120%;
-    border-bottom-style: solid;
+    /*border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: gray;
+    border-bottom-color: gray;*/
+    padding-top:1em;
 }
 h3 { font-size: 100%;}
 
@@ -92,6 +93,31 @@ h3 { font-size: 100%;}
     font-style: italic;
 }
 /* end toolstable */
+
+/* exampleslist */
+
+#content ul#examplelist {
+    margin-left: 0;
+}
+#examplelist img {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 80px;
+    clear: both;
+}
+#examplelist li:first-child {
+    border-top:0;
+}
+#examplelist li {
+    display: block;
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0 ;
+    clear: both;
+    border-top: 1px dashed #ccc;
+}
+
+/* end exampleslist */
+
 
 /* styles new header 2012/05/01***********************/
 
@@ -256,3 +282,85 @@ h3 { font-size: 100%;}
     float: right;
     padding-left: 2%;
 }
+
+/* jquerytools tabs css */
+/* root element for tabs  */
+ul.tabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    border-bottom:1px solid #666;
+    height:30px;
+}
+
+/* single tab */
+#content ul.tabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+    display: inline;
+}
+#content ul.tabs li a {
+    border-bottom: 0;
+}
+/* link inside the tab. uses a background image */
+ul.tabs a {
+    background: url(http://jquerytools.org/media/img/tabs/blue.png) no-repeat -420px 0;
+    font-size:14px;
+    display:block;
+    height: 30px;
+    line-height:30px;
+    width: 134px;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top:1px;
+}
+
+ul.tabs a:active {
+    outline:none;
+}
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover {
+    background-position: -420px -31px;
+    color:#fff;
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+    background-position: -420px -62px;
+    cursor:default !important;
+    color:#000 !important;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+
+
+/* width 1 */
+ul.tabs a.s { background-position: -553px 0; width:81px; }
+ul.tabs a.s:hover { background-position: -553px -31px; }
+ul.tabs a.s.current  { background-position: -553px -62px; }
+
+/* width 2 */
+ul.tabs a.l { background-position: -248px -0px; width:174px; }
+ul.tabs a.l:hover { background-position: -248px -31px; }
+ul.tabs a.l.current { background-position: -248px -62px; }
+
+
+/* width 3 */
+ul.tabs a.xl { background-position: 0 -0px; width:248px; }
+ul.tabs a.xl:hover { background-position: 0 -31px; }
+ul.tabs a.xl.current { background-position: 0 -62px; }
+
+
+/* initially all panes are hidden */
+.panes .pane {
+    display:none;
+}
+ /* end jquerytools tabs css */
