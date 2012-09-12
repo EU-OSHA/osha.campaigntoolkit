@@ -27,6 +27,14 @@ setup(name='osha.campaigntoolkit',
           'cioppino.twothumbs',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          # list libs needed for testing this project
+          'test': [
+              'mock',
+              'plone.app.testing',
+              'unittest2',
+          ]
+      },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
