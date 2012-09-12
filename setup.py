@@ -25,6 +25,7 @@ setup(name='osha.campaigntoolkit',
       install_requires=[
           'setuptools',
           'cioppino.twothumbs',
+          'plone.app.dexterity [grok]',
           # -*- Extra requirements: -*-
       ],
       extras_require={

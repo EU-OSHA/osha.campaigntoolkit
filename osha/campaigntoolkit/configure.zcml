@@ -2,12 +2,15 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:cmf="http://namespaces.zope.org/cmf"
-	xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:grok="http://namespaces.zope.org/grok"
     i18n_domain="osha.campaigntoolkit">    
 
     <five:registerPackage package="." initialize=".initialize" />
 
     <include package=".browser" />
+
+    <grok:grok package="." />
 
     <include file="skins.zcml" />
 
