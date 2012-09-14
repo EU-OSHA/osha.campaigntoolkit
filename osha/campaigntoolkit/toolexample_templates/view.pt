@@ -10,13 +10,7 @@
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
        	<a class="link-parent" tal:attributes="href string:${context/aq_inner/aq_parent/absolute_url}">Back to Overview</a>
-        <h2 i18n:translate="heading_organisation">Organisation:</h2>
-       	<span tal:content="context/organisation"></span>
-	<h2 i18n:translate="heading_country">Country:</h2>
-       	<span tal:content="context/country"></span>
-        <h2 i18n:translate="heading_link">Link:</h2>
-       	<a tal:attributes="href context/link"
-	   tal:content="context/link"></a>
+       	<div tal:content="structure context/body/output"></div>
     </metal:content-core>
 </metal:content-core>
 

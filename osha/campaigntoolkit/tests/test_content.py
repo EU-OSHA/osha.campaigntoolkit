@@ -23,7 +23,8 @@ class TestContent(IntegrationTestCase):
         self.portal.invokeFactory(
             'osha.campaigntoolkit.toolexample',
             'hammer',
-            title=u'Hammer'
+            title=u'Hammer',
+            body=u'A hammer is a tool meant to deliver an impact to an object'
         )
 
 
