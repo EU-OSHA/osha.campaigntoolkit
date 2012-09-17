@@ -27,6 +27,32 @@ class TestInstall(IntegrationTestCase):
         self.installer.uninstallProducts(['osha.campaigntoolkit'])
         self.failIf(self.installer.isProductInstalled('osha.campaigntoolkit'))
 
+    # actions.xml
+    def test_site_actions(self):
+        """Test if site actions have been set correctly."""
+        site_actions = self.portal['portal_actions']['site_actions']
+
+        self.assertEquals(
+            site_actions['accessibility'].url_expr,
+            'string:${globals_view/navigationRootUrl}/accessibility-info')
+        self.assertEquals(site_actions['accessibility'].visible, True)
+
+        self.assertEquals(
+            site_actions['disclaimer'].url_expr,
+            'string:http://osha.europa.eu/en/disclaimer')
+        self.assertEquals(site_actions['disclaimer'].visible, True)
+
+        self.assertEquals(
+            site_actions['copyright'].url_expr,
+            'string:${globals_view/navigationRootUrl}/copyright')
+        self.assertEquals(site_actions['copyright'].visible, True)
+
+        self.assertEquals(
+            site_actions['contact'].url_expr,
+            'string:${globals_view/navigationRootUrl}/contact-info')
+        self.assertEquals(site_actions['contact'].visible, True)
+        self.assertEquals(site_actions['contact'].title, 'Contact us')
+
 
 def test_suite():
     """This sets up a test suite that actually runs the tests in the class

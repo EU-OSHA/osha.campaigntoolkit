@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object name="portal_actions" meta_type="Plone Actions Tool" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <action-provider name="portal_actions"/>
+
+ <object name="site_actions" meta_type="CMF Action Category">
+  <property name="title"/>
+  <object name="sitemap" meta_type="CMF Action" i18n:domain="plone">
+   <property name="visible">False</property>
+  </object>
+  <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Accessibility</property>
+   <property name="url_expr">string:${globals_view/navigationRootUrl}/accessibility-info</property>
+   <property name="visible">True</property>
+  </object>
+  <object name="disclaimer" meta_type="CMF Action">
+   <property name="title">Disclaimer</property>
+   <property name="url_expr">string:http://osha.europa.eu/en/disclaimer</property>
+   <property name="visible">True</property>
+  </object>
+  <object name="copyright" meta_type="CMF Action">
+   <property name="title">Copyright</property>
+   <property name="url_expr">string:${globals_view/navigationRootUrl}/copyright</property>
+   <property name="visible">True</property>
+  </object>
+  <object name="contact" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Contact us</property>
+   <property name="url_expr">string:${globals_view/navigationRootUrl}/contact-info</property>
+   <property name="visible">True</property>
+  </object>
+  <object name="plone_setup" meta_type="CMF Action" i18n:domain="plone">
+   <property name="visible">False</property>
+  </object>
+ </object>
+</object>
