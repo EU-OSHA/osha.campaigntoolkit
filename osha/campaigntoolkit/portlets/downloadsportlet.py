@@ -1,7 +1,6 @@
 from osha.campaigntoolkit import  _
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
-from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.interface import implements
 
@@ -38,18 +37,12 @@ class Renderer(base.Renderer):
 
     @property
     def available(self):
-        """Don't show the portlet if there are no downloads."""
-        return len(self.downloads()) > 0
+        """Don't show the portlet if there are no items for download."""
+        return len(self.items()) > 0
 
-    def downloads(self):
-        """Return a list of images and files, contained in the context object.
-        """
-        catalog = getToolByName(self.context, 'portal_catalog')
-        return catalog(
-            path={'query': '/'.join(self.context.getPhysicalPath()),
-                  'depth': 1},
-            portal_type=('File', 'Image',),
-            sort_on='getObjPositionInParent')
+    def items(self):
+        return self.context.restrictedTraverse('@@folderListing')(
+            portal_type=('File', 'Image',))
 
 
 class AddForm(base.NullAddForm):
