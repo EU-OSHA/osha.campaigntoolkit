@@ -10,7 +10,7 @@
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
        	<a class="link-parent" tal:attributes="href string:${context/aq_inner/aq_parent/absolute_url}" i18n:translate="">Back to Overview</a>
-        <div class="image-right">
+        <div class="image-right" tal:condition="context/image|nothing">
             <img tal:replace="structure context/@@images/image/mini" />
         </div>
        	<div tal:content="structure context/body/output"></div>
