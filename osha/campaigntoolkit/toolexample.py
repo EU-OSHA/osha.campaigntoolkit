@@ -5,6 +5,7 @@ from five import grok
 from osha.campaigntoolkit import  _
 from plone.app.textfield import RichText
 from plone.directives import dexterity, form
+from plone.namedfile.field import NamedBlobImage
 from plone.namedfile.interfaces import IImageScaleTraversable
 
 
@@ -13,6 +14,11 @@ class IToolExample(form.Schema, IImageScaleTraversable):
 
     body = RichText(
         title=_(u"Body Text"),
+        required=False
+    )
+
+    image = NamedBlobImage(
+        title=_(u"Image"),
         required=False
     )
 
