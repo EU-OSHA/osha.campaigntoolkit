@@ -12,7 +12,8 @@ class IToolExample(form.Schema, IImageScaleTraversable):
     """Definition of the ToolExample schema."""
 
     body = RichText(
-        title=_(u"Body Text")
+        title=_(u"Body Text"),
+        required=False
     )
 
 
