@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<portlets
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="osha.campaigntoolkit">
+
+  <portlet
+      addview="osha.campaigntoolkit.portlets.DownloadsPortlet"
+      title="Downloads portlet"
+      description="Portlet that displays a list of download links for files and images in the folder."
+      i18n:attributes="title; description">
+        <for interface="plone.app.portlets.interfaces.IColumn" />
+  </portlet>
+
+  <assignment
+      manager="plone.rightcolumn"
+      category="content_type"
+      key="osha.campaigntoolkit.toolexample"
+      type="osha.campaigntoolkit.portlets.DownloadsPortlet"
+      name="downloads-portlet"
+      visible="1">
+  </assignment>
+
+</portlets>

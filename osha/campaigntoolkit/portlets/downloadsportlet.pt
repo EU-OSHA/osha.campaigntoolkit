@@ -1,0 +1,26 @@
+<dl class="portlet portletDownloadsPortlet"
+    i18n:domain="osha.campaigntoolkit">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span i18n:translate="">
+           Downloads
+        </span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+      <ul class="downloadLinks">
+        <li tal:repeat="download view/downloads">
+	      <a href="#"
+	         tal:define="download_obj download/getObject"
+	         tal:attributes="title download/Description;
+	     	          	     href string: ${download_obj/absolute_url}/download"
+             tal:content="download/Title"
+             i18n:translate=""
+             i18n:attributes="title">Download</a>
+	    </li>
+      </ul>
+    </dd>
+
+</dl>
