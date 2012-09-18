@@ -9,4 +9,5 @@
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
   <object name="osha.campaigntoolkit.toolexample" meta_type="Dexterity FTI" />
+  <object name="Folder" meta_type="Factory-based Type Information with dynamic views" />
 </object>

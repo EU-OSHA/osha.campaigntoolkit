@@ -25,5 +25,21 @@
         permission="zope2.View"
         />
 
+    <!-- Two column overview for folders -->
+    <browser:page
+        for="Products.CMFCore.interfaces.IFolderish"
+        name="overview"
+        class=".overview.Overview"
+        template="templates/overview.pt"
+        permission="zope2.View"
+        />
+
+    <browser:menuItem
+        for="Products.CMFCore.interfaces.IFolderish"
+        menu="plone_displayviews"
+        title="Overview"
+        action="@@overview"
+        description="A two column overview"
+        />
 
 </configure>

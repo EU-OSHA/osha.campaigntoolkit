@@ -53,6 +53,17 @@ class TestInstall(IntegrationTestCase):
         self.assertEquals(site_actions['contact'].visible, True)
         self.assertEquals(site_actions['contact'].title, 'Contact us')
 
+    # Folder.xml
+    def test_overview_view_for_folder(self):
+        """Test that the @@overview view is available in the Folder's display
+        drop-down menu.
+        """
+        folder_views = self.portal.portal_types.Folder.view_methods
+        self.assertIn('overview', folder_views)
+
+        # test that default drop-down menu items are still there
+        self.assertIn('folder_summary_view', folder_views)
+
 
 def test_suite():
     """This sets up a test suite that actually runs the tests in the class

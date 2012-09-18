@@ -351,6 +351,21 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     line-height: 1.6em;
     margin-bottom:2em;
 }
+#overview-columns > div{
+    float: left;
+    margin-right: 2em;
+    width: 45%;
+}
+#overview-columns ul{
+    list-style: none;
+    margin-left: 0;
+}
+.sublist{
+    margin-left: 3em;
+    font-style: italic;
+}
+
+
 /* toolstable */
 
 #toolstable {
