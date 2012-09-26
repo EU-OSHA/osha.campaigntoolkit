@@ -13,7 +13,7 @@ from plone.namedfile.interfaces import IImageScaleTraversable
 class IToolExample(form.Schema, IImageScaleTraversable):
     """Definition of the ToolExample schema."""
 
-    body = RichText(
+    text = RichText(
         title=_(u"Body Text"),
         required=False
     )

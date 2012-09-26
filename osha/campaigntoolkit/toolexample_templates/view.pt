@@ -13,7 +13,7 @@
         <div class="image-right" tal:condition="context/image|nothing">
             <img tal:replace="structure context/@@images/image/mini" />
         </div>
-       	<div tal:content="structure context/body/output|nothing"></div>
+       	<div tal:content="structure context/text/output|nothing"></div>
     </metal:content-core>
 </metal:content-core>
 

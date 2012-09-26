@@ -39,4 +39,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:upgradeStep
+      source="001"
+      destination="002"
+      profile="osha.campaigntoolkit:default"
+      title="Migrate pages to ToolExample objects"
+      description=""
+      sortkey="1"
+      handler="osha.campaigntoolkit.upgrade.migrate_pages_to_toolexample"
+      />
+
 </configure>

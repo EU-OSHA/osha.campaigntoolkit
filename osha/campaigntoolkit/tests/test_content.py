@@ -24,7 +24,7 @@ class TestContent(IntegrationTestCase):
             'osha.campaigntoolkit.toolexample',
             'hammer',
             title=u'Hammer',
-            body=u'A hammer is a tool meant to deliver an impact to an object'
+            text=u'A hammer is a tool meant to deliver an impact to an object'
         )
 
 
