@@ -42,4 +42,33 @@
         description="A two column overview"
         />
 
+    <!-- View for the default page of the folder that contains tool
+	 examples. -->
+    <browser:page
+        for="Products.ATContentTypes.interfaces.document.IATDocument"
+        name="toolexamples"
+        class=".toolexamples.ToolExamplesView"
+        template="templates/toolexamples.pt"
+        permission="zope2.View"
+        />
+
+    <browser:menuItem
+        for="Products.ATContentTypes.interfaces.document.IATDocument"
+        menu="plone_displayviews"
+        title="Tool Examples view"
+        action="@@toolexamples"
+        description="View for the default page of the folder that contains
+		     tool examples."
+        />
+
+    <!-- viewlets -->
+    <browser:viewlet
+	    name="osha.campaigntoolkit.toolexamples_viewlet"
+    	for="*"
+	    manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+    	class=".toolexample.ToolExamplesViewlet"
+    	template="templates/toolexamples_viewlet.pt"
+    	permission="zope2.View"
+    	/>
+
 </configure>

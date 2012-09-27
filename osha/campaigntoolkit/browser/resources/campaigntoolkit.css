@@ -500,6 +500,8 @@ dl.portlet a:hover {
    padding-bottom: 20px;
    background: url("++resource++osha.campaigntoolkit.resources/highlights.gif") no-repeat bottom center;
    margin-bottom: 2em;
+   font-size: 80%;
+   line-height: 1.5em;
 }
 
 #highlights-content {
@@ -524,20 +526,20 @@ dl.portlet a:hover {
     padding: 1em;
 }
 
-#content #highlights-tabs {
+#highlights-tabs {
     list-style: none;
     float: right;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 0.5em 0.5em 0;
 }
 
-#content #highlights-tabs li.ui-corner-top {
+#highlights-tabs li.ui-corner-top {
     float: left;
      margin: 0 0.5em 0 0;
 
 
 }
-#content #highlights-tabs li a {
+#highlights-tabs li a {
     color: #fff;
     font-weight: bold;
     font-size: 1.2em;
@@ -549,15 +551,15 @@ dl.portlet a:hover {
     -webkit-border-radius: 3px;
 }
 
-#content #highlights-tabs li:hover a{
+#highlights-tabs li:hover a{
     color: #003399;
 }
 
-#content #highlights-tabs li.ui-state-active {
+#highlights-tabs li.ui-state-active {
     background:#98a2b7;
 }
 
-#content #highlights-tabs a.current {
+#highlights-tabs a.current {
     background:#98a2b7;
 }
 
