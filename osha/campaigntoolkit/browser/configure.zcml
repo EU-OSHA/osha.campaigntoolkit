@@ -44,13 +44,13 @@
 
     <!-- View for the default page of the folder that contains tool
 	 examples. -->
-    <!--browser:page
+    <browser:page
         for="Products.ATContentTypes.interfaces.document.IATDocument"
         name="toolexamples"
         class=".toolexamples.ToolExamplesView"
         template="templates/toolexamples.pt"
         permission="zope2.View"
-        /-->
+        />
 
     <browser:menuItem
         for="Products.ATContentTypes.interfaces.document.IATDocument"
