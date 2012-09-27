@@ -66,12 +66,12 @@ dl.portlet a:hover {
 }
 /* Simplifications */
 
-#plone-contentmenu-actions,
+/*#plone-contentmenu-actions,
 #plone-contentmenu-display,
 .managePortletsLink {
     display:none;
 }
-
+*/
 /* */
 
 #content ul {
