@@ -64,6 +64,14 @@ dl.portlet a:hover {
     color: #999;
     font-size: 12px;
 }
+/* Simplifications */
+
+#plone-contentmenu-actions,
+#plone-contentmenu-display,
+.managePortletsLink {
+    display:none;
+}
+
 /* */
 
 #content ul {
