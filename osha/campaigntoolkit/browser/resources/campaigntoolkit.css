@@ -55,6 +55,15 @@ dl.portlet a:hover {
     background-color: #ffb;
 }
 
+/* Footer */
+#portal-siteactions {
+    border-top: 1px solid #ddd;
+    padding-top: 1em;
+}
+#portal-siteactions a {
+    color: #999;
+    font-size: 12px;
+}
 /* */
 
 #content ul {
