@@ -5,19 +5,19 @@
 
   <metal:javascript fill-slot="javascript_head_slot">
       <script type="text/javascript" language="javascript">
-	  $(function() {
-    	      // setup ul.tabs to work as tabs for each div directly under
-	      // div.panes
-	      $("ul.tabs").tabs("div.panes > div");
+          $(function() {
+              // setup ul.tabs to work as tabs for each div directly under
+              // div.panes
+              $("ul.tabs").tabs("div.panes > div");
 
-	      // Hide the tool example highlights on the 'Examples' tab
-	      $("a#examples").click(function(){
-	          $("#highlightsContainer").hide();
-	      });
-	      $("a#overview").click(function(){
-	          $("#highlightsContainer").show();
-	      });
-	});
+              // Hide the tool example highlights on the 'Examples' tab
+              $("a#examples").click(function(){
+                  $("#highlightsContainer").hide();
+              });
+              $("a#overview").click(function(){
+                  $("#highlightsContainer").show();
+              });
+        });
     </script>
   </metal:javascript>
   <metal:css fill-slot="css_slot"></metal:css>
@@ -26,29 +26,29 @@
 
 <div metal:fill-slot="main">
     <div id="mainContent">
-	<h1 tal:content="here/Title"></h1>
-	<p class="documentDescription" tal:content="here/Description" />
-	<ul class="tabs">
-	    <li><a id="overview" href="#">Overview</a></li>
-	    <li><a id="examples" href="#">Examples</a></li>
-	</ul>
-	<div class="panes">
-	    <div>
-		<h2>How to use Posters</h2>
-		<div tal:content="structure here/getText">Body text</div>
-	    </div>
+        <h1 tal:content="here/Title"></h1>
+        <p class="documentDescription" tal:content="here/Description" />
+        <ul class="tabs">
+            <li><a id="overview" href="#">Overview</a></li>
+            <li><a id="examples" href="#">Examples</a></li>
+        </ul>
+        <div class="panes">
+            <div>
+                <h2>How to use Posters</h2>
+                <div tal:content="structure here/getText">Body text</div>
+            </div>
 
-	    <div>
-		<ul id="examplelist">
-		    <li><img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
-			Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
-		    </li>
-		    <li><img src="http://www.healthy-workplaces.eu/en/resources/promotion-materials/leaflet/en_hwc2012-13_leaflet.pdf/@@hw_get_thumb">
-			Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
-		    </li>
-		</ul>
-	    </div>
-	</div>
+            <div>
+                <ul id="examplelist">
+                    <li><img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
+                        Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
+                    </li>
+                    <li><img src="http://www.healthy-workplaces.eu/en/resources/promotion-materials/leaflet/en_hwc2012-13_leaflet.pdf/@@hw_get_thumb">
+                        Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 

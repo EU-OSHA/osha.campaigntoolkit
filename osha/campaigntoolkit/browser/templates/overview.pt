@@ -8,35 +8,35 @@
 <body>
 
 <metal:content-description fill-slot="content-description">
-  <div tal:content="structure context/@@rate-if-you-dare"/>
-  <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
-    Description
-  </div>
+    <div tal:content="structure context/@@rate-if-you-dare"/>
+    <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
+        Description
+    </div>
 </metal:content-description>
 
 <metal:content-core fill-slot="content-core">
-  <metal:content-core define-macro="content-core">
-    <div id="overview-columns" tal:define="sublists view/sublists">
-      <div tal:repeat="sublist sublists"
-           tal:condition="sublists">
-        <ul tal:condition="sublist">
-          <li tal:repeat="item sublist">
-            <h2 tal:content="item/Title">Item title</h2>
-	    <div class="sublist">
-              <a tal:repeat="subitem python: item.getObject().restrictedTraverse('@@folderListing')(portal_type=('osha.campaigntoolkit.toolexample', 'Document', 'Folder',))"
-		 tal:content="subitem/Title"
-		 tal:attributes="href subitem/getURL">Subitem title</a>
-	    </div>
-	  </li>
-        </ul>
-      </div>
-      <div class="visualClear"><!-- --></div>
-      <div class="discreet"
-           tal:condition="not:sublists"
-           i18n:translate="label_no_items">
-	There are no items in this folder to show.
-      </div>
-    </div>
+    <metal:content-core define-macro="content-core">
+        <div id="overview-columns" tal:define="sublists view/sublists">
+            <div tal:repeat="sublist sublists"
+                 tal:condition="sublists">
+                <ul tal:condition="sublist">
+                    <li tal:repeat="item sublist">
+                        <h2 tal:content="item/Title">Item title</h2>
+                        <div class="sublist">
+                            <a tal:repeat="subitem python: item.getObject().restrictedTraverse('@@folderListing')(portal_type=('osha.campaigntoolkit.toolexample', 'Document', 'Folder',))"
+                               tal:content="subitem/Title"
+                               tal:attributes="href subitem/getURL">Subitem title</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="visualClear"><!-- --></div>
+            <div class="discreet"
+                 tal:condition="not:sublists"
+                 i18n:translate="label_no_items">
+                There are no items in this folder to show.
+            </div>
+        </div>
     </metal:content-core>
 </metal:content-core>
 

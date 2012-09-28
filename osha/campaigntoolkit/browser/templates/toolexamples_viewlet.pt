@@ -1,32 +1,32 @@
 <div id="highlightsContainer" tal:define="items view/latest_examples"
      tal:condition="items">
     <div class="carouselContainer" id="highlights">
-	<h2 i18n:translate="">Tools</h2>
-	<div id="highlights-content">
-	    <div tal:repeat="item items"
-		 tal:attributes="id string:highlights-${repeat/item/number}">
-		<h3><a tal:attributes="href item/getURL"
-		       tal:content="item/Title">Title</a></h3>
-		<div class="image-right" tal:condition="item/image|nothing">
-		    <a tal:attributes="href item/getURL">
-			<img tal:replace="structure item/@@images/image/mini" />
-		    </a>
-		</div>
-		<p class="teaserdate">Added on 01.02.2012</p>
-		<p class="teaser_content"
-		   tal:content="item/Description">Description</p>
-		<p class="teaser_more">
-		    <a tal:attributes="href item/getURL" class="more"
-		       i18n:translate="">More…</a>
-		</p>
-	    </div>
-	</div>
+        <h2 i18n:translate="">Tools</h2>
+        <div id="highlights-content">
+            <div tal:repeat="item items"
+                 tal:attributes="id string:highlights-${repeat/item/number}">
+                <h3><a tal:attributes="href item/getURL"
+                       tal:content="item/Title">Title</a></h3>
+                <div class="image-right" tal:condition="item/image|nothing">
+                    <a tal:attributes="href item/getURL">
+                        <img tal:replace="structure item/@@images/image/mini" />
+                    </a>
+                </div>
+                <p class="teaserdate">Added on 01.02.2012</p>
+                <p class="teaser_content"
+                   tal:content="item/Description">Description</p>
+                <p class="teaser_more">
+                    <a tal:attributes="href item/getURL" class="more"
+                       i18n:translate="">More…</a>
+                </p>
+            </div>
+        </div>
 
-	<ul id="highlights-tabs">
-	   <li class="ui-corner-top" tal:repeat="item items">
-		<a tal:attributes="id string:highlights-${repeat/item/number}" 
-		   tal:content="repeat/item/number"></a>
-	    </li>
-	</ul>
+        <ul id="highlights-tabs">
+           <li class="ui-corner-top" tal:repeat="item items">
+                <a tal:attributes="id string:highlights-${repeat/item/number}"
+                   tal:content="repeat/item/number"></a>
+            </li>
+        </ul>
     </div>
 </div>

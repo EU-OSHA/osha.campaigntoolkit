@@ -43,7 +43,7 @@
         />
 
     <!-- View for the default page of the folder that contains tool
-	 examples. -->
+         examples. -->
     <browser:page
         for="Products.ATContentTypes.interfaces.document.IATDocument"
         name="toolexamples"
@@ -58,17 +58,17 @@
         title="Tool Examples view"
         action="@@toolexamples"
         description="View for the default page of the folder that contains
-		     tool examples."
+                     tool examples."
         />
 
     <!-- viewlets -->
     <browser:viewlet
-	    name="osha.campaigntoolkit.toolexamples_viewlet"
-    	for="*"
-	    manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-    	class=".toolexample.ToolExamplesViewlet"
-    	template="templates/toolexamples_viewlet.pt"
-    	permission="zope2.View"
-    	/>
+        name="osha.campaigntoolkit.toolexamples_viewlet"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".toolexample.ToolExamplesViewlet"
+        template="templates/toolexamples_viewlet.pt"
+        permission="zope2.View"
+        />
 
 </configure>
