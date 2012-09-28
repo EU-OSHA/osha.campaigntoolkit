@@ -25,7 +25,7 @@ def get_examples(context, limit=None):
     path = folder.getPhysicalPath()
     path = "/".join(path)
     query = {
-        'path': {"query": path, "depth": 1},
+        'path': {"query": path},
         'portal_type': 'osha.campaigntoolkit.toolexample',
         'review_state': 'published',
         'sort_on': 'Date',
