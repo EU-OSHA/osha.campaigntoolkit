@@ -64,11 +64,14 @@
     <!-- viewlets -->
     <browser:viewlet
         name="osha.campaigntoolkit.toolexamples_viewlet"
-        for="*"
+        for=".interfaces.ICanShowToolExamples"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".toolexample.ToolExamplesViewlet"
         template="templates/toolexamples_viewlet.pt"
         permission="zope2.View"
         />
+
+    <!-- marker interfaces -->
+    <interface interface=".interfaces.ICanShowToolExamples" />
 
 </configure>

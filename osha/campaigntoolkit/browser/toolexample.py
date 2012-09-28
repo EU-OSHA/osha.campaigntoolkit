@@ -40,6 +40,7 @@ def get_examples(context, limit=None):
 
 
 class ToolExampleView(BrowserView):
+    """View for the ToolExample type."""
     def __call__(self):
         return self.index()
 
