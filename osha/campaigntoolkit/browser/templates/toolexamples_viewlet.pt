@@ -1,4 +1,6 @@
-<div id="highlightsContainer" tal:define="items view/latest_examples"
+<div id="highlightsContainer"
+     tal:define="items view/latest_examples;
+                 toLocalizedTime nocall: context/@@plone/toLocalizedTime;"
      tal:condition="items">
     <div class="carouselContainer" id="highlights">
         <h2 i18n:translate="">Tools</h2>
@@ -7,12 +9,16 @@
                  tal:attributes="id string:highlights-${repeat/item/number}">
                 <h3><a tal:attributes="href item/getURL"
                        tal:content="item/Title">Title</a></h3>
-                <div class="image-right" tal:condition="item/image|nothing">
+                <div class="image-right"
+                     tal:define="item_obj item/getObject"
+                     tal:condition="item_obj/image|nothing">
                     <a tal:attributes="href item/getURL">
-                        <img tal:replace="structure item/@@images/image/mini" />
+                        <img tal:replace="structure item_obj/@@images/image/mini" />
                     </a>
                 </div>
-                <p class="teaserdate">Added on 01.02.2012</p>
+                <p class="teaserdate">Added on
+                    <span tal:replace="python: toLocalizedTime(item.CreationDate())">01.02.2012</span>
+                </p>
                 <p class="teaser_content"
                    tal:content="item/Description">Description</p>
                 <p class="teaser_more">

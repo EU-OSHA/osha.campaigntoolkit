@@ -47,7 +47,7 @@
     <browser:page
         for="Products.ATContentTypes.interfaces.document.IATDocument"
         name="toolexamples"
-        class=".toolexamples.ToolExamplesView"
+        class=".toolexample.ToolExamplesView"
         template="templates/toolexamples.pt"
         permission="zope2.View"
         />

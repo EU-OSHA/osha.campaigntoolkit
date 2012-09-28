@@ -39,12 +39,17 @@
             </div>
 
             <div>
-                <ul id="examplelist">
-                    <li><img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
-                        Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
-                    </li>
-                    <li><img src="http://www.healthy-workplaces.eu/en/resources/promotion-materials/leaflet/en_hwc2012-13_leaflet.pdf/@@hw_get_thumb">
-                        Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
+                <ul id="examplelist" tal:define="items view/examples"
+                    tal:condition="items">
+                    <li tal:repeat="item items">
+                        <div class="image-left"
+                             tal:define="item_obj item/getObject"
+                             tal:condition="item_obj/image|nothing">
+                            <img tal:replace="structure item_obj/@@images/image/mini" />
+                        </div>
+                        <h3><a tal:attributes="href item/getURL"
+                               tal:content="item/Title">Title</a></h3>
+                        <p tal:content="item/Description">Description</p>
                     </li>
                 </ul>
             </div>
