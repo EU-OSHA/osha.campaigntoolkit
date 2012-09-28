@@ -1,121 +1,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
-      metal:use-macro="here/main_template/macros/master"
-      i18n:domain="osha">
-
-  <metal:javascript fill-slot="javascript_head_slot">
-    <script type="text/javascript"
-            src="++resource++osha.campaigntoolkit.resources/highlights-carousel.js"
-            language="javascript"></script>
-    <script type="text/javascript"
-            language="javascript">
-            $(function() {
-                // setup ul.tabs to work as tabs for each div directly under div.panes
-                $("ul.tabs").tabs("div.panes > div");
-            });
-    </script>
-  </metal:javascript>
-      <metal:css fill-slot='css_slot'>
-      </metal:css>
-
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="osha.campaigntoolkit">
 <body>
 
-<div metal:fill-slot="main">
-    <div id="mainContent">
-
-        <h1 tal:content="here/Title"></h1>
-        <p class="documentDescription" tal:content="here/Description" />
-
-<ul class="tabs">
-    <li><a href="#">Overview</a></li>
-    <li><a href="#">Examples</a></li>
-</ul>
-
-<div class="panes">
-    <div>
-        <h2>How to use Posters</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus venenatis augue, in tempus turpis rutrum lacinia. Vestibulum porttitor condimentum faucibus. Phasellus sit amet est sem. In lectus lacus, iaculis a ultricies et, sodales quis dui. Suspendisse elit eros, aliquam vitae accumsan eu, porta id nibh. Nullam interdum rhoncus sapien, in cursus arcu porta nec. Phasellus libero elit, pretium varius dictum quis, tempus vel lorem. Maecenas tincidunt tempor enim, ac tempor metus tempor ut. Etiam facilisis ultricies odio, ut malesuada magna sodales vulputate. Sed egestas egestas tortor eget consequat. Aliquam nisi libero, porta eget pretium id, dictum in nisl.</p>
-
-        <p>Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis. Maecenas in convallis lacus. Vivamus neque erat, commodo at vehicula quis, pharetra at libero. Etiam sodales gravida ante, vitae accumsan sapien faucibus sed. Integer volutpat ante sit amet tellus mattis imperdiet. Donec sit amet eros eget dui tristique vestibulum. Nunc nisl turpis, ultrices eu sollicitudin a, dictum at dolor. Sed ullamcorper rutrum euismod. In blandit vulputate enim, eget ornare purus fermentum vitae. Etiam orci mi, mollis eget euismod at, commodo non sapien. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <p>Praesent ac lobortis nunc. Curabitur at risus in magna vehicula convallis quis non metus. Nulla varius tellus porttitor nunc pellentesque molestie. Vivamus lacinia arcu sit amet velit sollicitudin malesuada sit amet quis est. Fusce ut orci dolor, nec vehicula nisl. Nulla elementum augue sit amet mauris pulvinar et ultricies massa molestie. Vestibulum rhoncus condimentum sodales.</p>
-
-
-      <div id="highlightsContainer">
-        <div class="carouselContainer" id="highlights">
-          <h2>Tools</h2>
-          <div id="highlights-content">
-            <div id="highlights-1">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Campaign Poster for Healthy Workplaces</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
-                </a>
-                <p class="teaserdate">Added on 01.02.2012</p>
-                <p class="teaser_content"> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-            </div>
-            <div id="highlights-2">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Press Conference on start of campaign</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/eu-agencies-the-way-ahead/image_mini">
-                </a>
-                <p class="teaserdate">Added on 05.06.2012</p>
-                <p class="teaser_content"> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-
-            </div>
-            <div id="highlights-3">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Leaflet on Worker Participation</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe/image_mini">
-                </a>
-                <p class="teaserdate">Added on 01.02.2011</p>
-                <p class="teaser_content"> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-            </div>
-            <div id="highlights-4">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Press Release on nanomaterials</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/guidelines-for-synthetic-nanomaterials/image_mini">
-                </a>
-                <p class="teaserdate">Added on 22.02.2011</p>
-                <p class="teaser_content"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-                </div>
-          </div>
-
-          <ul id="highlights-tabs">
-            <li class="ui-corner-top">
-                <a href="#highlights-1">1</a>
-            </li>
-            <li class="ui-corner-top">
-                <a href="#highlights-2">2</a>
-            </li>
-            <li class="ui-corner-top">
-                <a href="#highlights-3">3</a>
-            </li>
-            <li class="ui-corner-top">
-                <a href="#highlights-4">4</a>
-            </li>
-        </ul>
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <a class="link-parent"
+           tal:attributes="href string:${context/aq_inner/aq_parent/absolute_url}"
+           i18n:translate="">Back to Overview</a>
+        <div class="image-right" tal:condition="context/image|nothing">
+            <img tal:replace="structure context/@@images/image/mini" />
         </div>
-      </div>
-    </div>
+        <div tal:content="structure context/text/output|nothing"></div>
+    </metal:content-core>
+</metal:content-core>
 
-    <div>
-        <ul id="examplelist">
-            <li><img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
-                Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
-            </li>
-            <li><img src="http://www.healthy-workplaces.eu/en/resources/promotion-materials/leaflet/en_hwc2012-13_leaflet.pdf/@@hw_get_thumb">
-                Vivamus fermentum luctus orci lobortis feugiat. Vestibulum et blandit elit. Nulla suscipit felis vitae ipsum semper cursus. Nam iaculis, nulla sed tincidunt ornare, felis sem laoreet elit, in convallis erat lectus a turpis.
-            </li>
-        </ul>
-    </div>
-
-</div>
-
-</div>
-</div>
 </body>
 </html>

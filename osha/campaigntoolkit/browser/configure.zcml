@@ -18,14 +18,14 @@
         />
 
     <browser:page
-        for="*"
+        for="osha.campaigntoolkit.toolexample.IToolExample"
         name="toolexample-view"
         class=".toolexample.ToolExampleView"
         template="templates/toolexample.pt"
         permission="zope2.View"
         />
 
-    <!-- Two column overview for folders -->
+    <!-- two column overview for folders -->
     <browser:page
         for="Products.CMFCore.interfaces.IFolderish"
         name="overview"
@@ -42,7 +42,7 @@
         description="A two column overview"
         />
 
-    <!-- View for the default page of the folder that contains tool
+    <!-- view for the default page of the folder that contains tool
          examples. -->
     <browser:page
         for="Products.ATContentTypes.interfaces.document.IATDocument"
