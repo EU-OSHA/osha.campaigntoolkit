@@ -19,7 +19,9 @@ def migrate_pages_to_toolexample(context):
     """
     portal = getSite()
     catalog = getToolByName(portal, 'portal_catalog')
-    pages = catalog(portal_type='Document', path="/Plone/tools")
+    path = portal.getPhysicalPath()
+    path = "/".join(path) + '/tools'
+    pages = catalog(portal_type='Document', path=path)
 
     logger.info('Starting migration of pages to ToolExample objects...')
 
@@ -52,4 +54,3 @@ def migrate_pages_to_toolexample(context):
         container.manage_renameObject(tmp_id, obj_id)
 
     logger.info('Migration done.')
-            

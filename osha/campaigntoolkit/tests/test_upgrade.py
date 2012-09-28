@@ -22,18 +22,18 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
         'ToolExample' page.
 
         portal
-         |--> folder1
-               |--> page1
+         |--> page1
+         |--> tools
                |--> folder2
                      |--> facebook-osha
 
         """
         setRoles(self.portal, TEST_USER_ID, ('Manager',))
 
-        self.portal.invokeFactory('Folder', 'folder1')
-        self.portal['folder1'].invokeFactory('Document', 'page1')
-        self.portal['folder1'].invokeFactory('Folder', 'folder2')
-        self.portal['folder1']['folder2'].invokeFactory(
+        self.portal.invokeFactory('Folder', 'tools')
+        self.portal.invokeFactory('Document', 'page1')
+        self.portal['tools'].invokeFactory('Folder', 'folder2')
+        self.portal['tools']['folder2'].invokeFactory(
             'Document',
             'facebook-osha',
             title='Facebook for EU-OSHA photo competition',
@@ -61,8 +61,8 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
 
         # Run the migration
         migrate_pages_to_toolexample(self.portal)
-        page = self.portal['folder1']['page1']
-        toolexample = self.portal['folder1']['folder2']['facebook-osha']
+        page = self.portal['page1']
+        toolexample = self.portal['tools']['folder2']['facebook-osha']
 
         # The normal page should stay as it was
         self.assertEqual(page.portal_type, 'Document')
@@ -85,7 +85,7 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
             '</dl>')
 
         # The .tmp object shouldn't be there
-        self.assertEquals(self.portal['folder1']['folder2'].keys(),
+        self.assertEquals(self.portal['tools']['folder2'].keys(),
                           ['facebook-osha'])
 
 
