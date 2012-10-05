@@ -30,9 +30,14 @@ h3 { font-size: 100%;}
 #content a:hover, dl.portlet a:hover {
     color: #003399 !important;
 }
+dl.portlet a.navTreeCurrentNode {
+    border-left: 1em solid !important;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding-left:5px;
+}
 dl.portlet a.navTreeItemInPath {
     background-color: #ddd;
-    border-left: 1em solid !important;
     margin-left: -1em;
     margin-right: -1em;
     padding-left:5px;
@@ -423,7 +428,24 @@ dl.portlet a:hover {
     letter-spacing: 1px;
 }
 
+.navTreeLevel2 {
+    background-color: #eee;
+    font-style: italic;
+}
+.navTreeLevel2 a {
+    padding-left: 10px;
+}
 
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+.shadow-inner {
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
 .sublist{
     margin-left: 3em;
     font-style: italic;
