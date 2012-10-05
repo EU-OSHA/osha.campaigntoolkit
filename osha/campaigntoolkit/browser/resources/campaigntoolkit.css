@@ -422,12 +422,15 @@ dl.portlet a:hover {
     margin-left: 0;
 }
 #content h2 > a,
-#content h2 > a:visited {
+#content h2 > a:visited,
+#content h2 > a:link {
     font: 22px Abadi;
     color:#515151;
     letter-spacing: 1px;
 }
-
+#content h2 > a:hover {
+    color: #000;
+}
 .navTreeLevel2 {
     background-color: #eee;
     font-style: italic;
