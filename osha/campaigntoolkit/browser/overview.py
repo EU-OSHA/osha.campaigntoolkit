@@ -32,7 +32,7 @@ class Overview(BrowserView):
         query = {
             'portal_type': 'Folder', 
             'review_state': 'published',
-            'sort_on': 'getObjectPositionInParent'
+            'sort_on': 'getObjPositionInParent'
             }
         items = self.context.restrictedTraverse('@@folderListing')(**query)
         return self.two_column_list(items)
