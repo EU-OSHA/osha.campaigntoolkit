@@ -51,6 +51,7 @@
                         <p tal:content="item/Description">Description</p>
                     </li>
                 </ul>
+				<div class="visualClear"><!-- --></div>
             </div>
         </div>
     </div>
