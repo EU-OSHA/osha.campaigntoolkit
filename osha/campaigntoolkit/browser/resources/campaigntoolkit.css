@@ -464,7 +464,7 @@ dl.portlet a:hover {
 
 #content{
 
-    padding: 0 1em;
+    padding: 0;
 
 }
 #intro{
@@ -704,5 +704,11 @@ ul.tabs a.xl.current { background-position: 0 -62px; }
 /* initially all panes are hidden */
 .panes .pane {
     display:none;
+}
+div.panes > div { padding: 1em;}
+div.panes { 
+    border-left: 1px solid #999; 
+    border-right: 1px solid #999; 
+    border-bottom: 1px solid #999; 
 }
  /* end jquerytools tabs css */

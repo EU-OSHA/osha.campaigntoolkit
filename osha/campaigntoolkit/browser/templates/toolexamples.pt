@@ -34,7 +34,6 @@
         </ul>
         <div class="panes">
             <div>
-                <h2>How to use Posters</h2>
                 <div tal:content="structure here/getText">Body text</div>
             </div>
 

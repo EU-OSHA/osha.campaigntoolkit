@@ -50,7 +50,7 @@
         class=".toolexample.ToolExamplesView"
         template="templates/toolexamples.pt"
         permission="zope2.View"
-        />
+       />
 
     <browser:menuItem
         for="Products.ATContentTypes.interfaces.document.IATDocument"
