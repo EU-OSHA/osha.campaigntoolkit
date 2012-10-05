@@ -21,7 +21,7 @@
                  tal:condition="sublists">
                 <ul tal:condition="sublist">
                     <li tal:repeat="item sublist">
-                        <h2 tal:content="item/Title">Item title</h2>
+                        <h2><a href="#" tal:attributes="href item/getURL" tal:content="item/Title">Item title</a></h2>
                         <div class="sublist">
                             <a tal:repeat="subitem python: item.getObject().restrictedTraverse('@@folderListing')(portal_type=('Folder',))"
                                tal:content="subitem/Title"

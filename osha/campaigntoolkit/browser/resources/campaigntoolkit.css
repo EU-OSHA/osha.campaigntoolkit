@@ -1,5 +1,10 @@
+@font-face {
+	font-family: "Abadi";
+	src: url("fonts/Abadi-MT-Std-Condensed Light.otf")
+}
+
 body {
-    background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/top.gif') repeat-x top left;
+    background: transparent url('http://osha.europa.eu/top.gif') repeat-x top left;
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
 
 }
@@ -15,9 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 150%;}
 h2 {
     font-size: 120%;
-    /*border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: gray;*/
     padding-top:1em;
 }
 h3 { font-size: 100%;}
@@ -25,7 +27,9 @@ h3 { font-size: 100%;}
 /*dl.portlet ul.navTreeLevel1 .navTreeItem {
     padding-left: 1.5em;
 }*/
-
+#content a:hover, dl.portlet a:hover {
+    color: #003399 !important;
+}
 dl.portlet a.navTreeItemInPath {
     background-color: #ddd;
     border-left: 1em solid !important;
@@ -49,7 +53,7 @@ dl.portlet a:visited {
 }
 #content a:hover,
 dl.portlet a:hover {
-    color: #003399 !important; 
+    color: yellow; 
 }
 #content a:target {
     background-color: #ffb;
@@ -412,6 +416,14 @@ dl.portlet a:hover {
     list-style: none;
     margin-left: 0;
 }
+#content h2 > a,
+#content h2 > a:visited {
+    font: 22px Abadi;
+    color:#515151;
+    letter-spacing: 1px;
+}
+
+
 .sublist{
     margin-left: 3em;
     font-style: italic;
