@@ -541,7 +541,7 @@ dl.portlet a:hover {
     height: 320px;
 }
 
-#highlightsContainer{
+#highlightsContainer {
    padding-bottom: 20px;
    background: url("++resource++osha.campaigntoolkit.resources/highlights.gif") no-repeat bottom center;
    margin-bottom: 2em;

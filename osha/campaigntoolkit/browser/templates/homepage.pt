@@ -7,6 +7,22 @@
     <script type="text/javascript"
             src="++resource++osha.campaigntoolkit.resources/highlights-carousel.js"
             language="javascript"></script>
+
+     <script type="text/javascript" language="javascript">
+         $(function() {
+             // setup ul.tabs to work as tabs for each div directly under
+             // div.panes
+             $("ul.tabs").tabs("div.panes > div");
+
+             // Hide the tool example highlights on the 'Examples' tab
+             $("a#examples").click(function(){
+                 $("#highlightsContainer").hide();
+             });
+             $("a#overview").click(function(){
+                 $("#highlightsContainer").show();
+             });
+       });
+   </script>
   </metal:javascript>
       <metal:css fill-slot='css_slot'>
       </metal:css>
@@ -24,86 +40,28 @@
         </a>
       </div>
 
-
-      <div id="highlightsContainer">
-        <div class="carouselContainer" id="highlights">
-          <h2>Tools</h2>
-          <div id="highlights-content">
-            <div id="highlights-1">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Campaign Poster for Healthy Workplaces</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/safe-maintenance-in-practice-read-our-latest-report-collecting-successful-solutions/image_mini">
-                </a>
-                <p class="teaserdate">Added on 01.02.2012</p>
-                <p class="teaser_content"> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-            </div>
-            <div id="highlights-2">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Press Conference on start of campaign</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/eu-agencies-the-way-ahead/image_mini">
-                </a>
-                <p class="teaserdate">Added on 05.06.2012</p>
-                <p class="teaser_content"> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-
-            </div>
-            <div id="highlights-3">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Leaflet on Worker Participation</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="/osha/portal/en/teaser/workplace-violence-harassment-increase-Europe/image_mini">
-                </a>
-                <p class="teaserdate">Added on 01.02.2011</p>
-                <p class="teaser_content"> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-            </div>
-            <div id="highlights-4">
-                <h3><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">Press Release on nanomaterials</a></h3>
-                <a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe">
-                <img src="http://www.test.osha.syslab.com/en/teaser/guidelines-for-synthetic-nanomaterials/image_mini">
-                </a>
-                <p class="teaserdate">Added on 22.02.2011</p>
-                <p class="teaser_content"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem...</p>
-                <p class="teaser_more"><a href="http://www.test.osha.syslab.com/en/teaser/workplace-violence-harassment-increase-Europe" class="more">More…</a></p>
-                </div>
-          </div>
-
-          <ul id="highlights-tabs">
-            <li class="ui-corner-top">
-                <a href="#highlights-1">1</a>
-            </li>
-            <li class="ui-corner-top">
-                <a href="#highlights-2">2</a>
-            </li>
-            <li class="ui-corner-top">
-                <a href="#highlights-3">3</a>
-            </li>
-            <li class="ui-corner-top">
-                <a href="#highlights-4">4</a>
-            </li>
-        </ul>
-        </div>
-      </div>
-
-
       <div id="in-focus-container">
         <h2>What you can expect</h2>
         <div class="in-focus" id="in-focus">
             <div id="infocus-1">
                 <img src="++resource++osha.campaigntoolkit.resources/knot.jpg" width="130" title="Very likely copyrighted, not to use in production">
                 <h3>How to run a campaign</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <strong>Aliquam interdum pulvinar nibh</strong>. Maecenas eget nunc in justo rhoncus aliquam. Phasellus nisl mi, convallis ut, lacinia vel, sodales tempus, ante. Praesent eros. </p>
-                <p><a rel="nofollow" target="_blank" href="howto">More&hellip;</a></p>
+                <p>A campaign is an organised course of action to achieve a particular goal.</p>
+				<p>No matter how large or small, it commonly uses a series of communications tools to
+				    share a message, 
+				    raise awareness and 
+				    shape the behavior of its target audience.</p>				
+                <p><a rel="nofollow" target="_blank" href="how-to-build-your-campaign">More&hellip;</a></p>
             </div>
             <div id="infocus-2">
                 <img src="++resource++osha.campaigntoolkit.resources/tools.jpg" width="150" title="Very likely copyrighted, not to use in production">
                 <h3>Tools</h3>
-                <p>Stet clita kasd gubergren, no sea takimata sanctus est <strong>Lorem ipsum dolor</strong> sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut <strong>labore et dolore magna aliquyam erat</strong>, sed diam voluptua</p>
-                <p><a rel="nofollow" target="_blank" href="howto">More&hellip;</a></p>
+                <p>This section contains a large number of real world campaign tool examples. Browse the tools and get an idea.</p>
+                <p><a rel="nofollow" target="_blank" href="tools">More&hellip;</a></p>
             </div>
         </div>
       </div>
-
+	<div class="visualClear"><!-- --></div>
 
     </div>
 </div>

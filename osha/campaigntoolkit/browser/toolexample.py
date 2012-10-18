@@ -2,6 +2,7 @@ from Acquisition import aq_parent, aq_inner
 from plone.app.layout.viewlets import common as base
 from Products.CMFCore.interfaces import IFolderish
 from Products.Five.browser import BrowserView
+from plone.app.contentlisting.interfaces import IContentListing
 
 # Number of latest toolexamples to show in the viewlet
 LIMIT = 4
@@ -31,6 +32,9 @@ def get_examples(context, limit=None):
         'sort_on': 'Date',
         'sort_order': 'reverse'
     }
+    if folder == context.portal_url.getPortalObject():
+        return IContentListing(context.portal_catalog(query)[:limit])
+        
 
     if limit is not None:
         query['sort_limit'] = limit
