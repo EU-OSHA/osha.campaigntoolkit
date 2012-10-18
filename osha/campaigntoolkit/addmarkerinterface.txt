@@ -1,0 +1,19 @@
+from Products.Five.utilities.marker import mark
+from osha.campaigntoolkit.browser.interfaces import ICanShowToolExamples
+
+portal = app.Plone
+pc = portal.portal_catalog
+pages = pc(path='/Plone/tools', portal_type='Document')
+print len(pages)
+cnt = 0
+for page in pages:
+  pageob = page.getObject()
+  if pageob.getProperty('layout', '') == 'toolexamples':
+    mark(pageob, ICanShowToolExamples)
+    cnt+=1
+
+print cnt
+import transaction
+transaction.commit()
+
+
