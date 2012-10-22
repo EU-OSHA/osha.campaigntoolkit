@@ -3,7 +3,7 @@
                  toLocalizedTime nocall: context/@@plone/toLocalizedTime;"
      tal:condition="items">
     <div class="carouselContainer" id="highlights">
-        <h2 i18n:translate="">Tools</h2>
+        <h2 i18n:translate="">Examples</h2>
         <div id="highlights-content">
             <div tal:repeat="item items"
                  tal:attributes="id string:highlights-${repeat/item/number}">
