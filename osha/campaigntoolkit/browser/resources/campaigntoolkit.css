@@ -381,6 +381,9 @@ dl.portlet a:hover {
 #portal-searchbox {
     padding-top: 30px;
 }
+#portal-searchbox .searchSection {
+    visibility: hidden;
+}
 #visual-portal-wrapper {
     width: 960px;
     margin: 0 auto;
