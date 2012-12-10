@@ -51,11 +51,15 @@ dl.portlet a:link {
     border-bottom: 0.1em solid #003399;
 }
 
-#content a:visited,
 dl.portlet a:visited {
     color: #003399;
     border-bottom: 0.1em solid #003399;
 }
+#content a:visited {
+    color: #668899;
+    border-bottom: 0.1em solid #668899;
+}
+
 #content a:hover,
 dl.portlet a:hover {
     color: yellow; 
