@@ -749,3 +749,11 @@ div.panes {
     border-bottom: 1px solid #999; 
 }
  /* end jquerytools tabs css */
+
+ 
+/* On search results page don't display icons for content types
+  until we have meaningful icons for ALL content types
+  (we will later remove this rule) */
+#search-results dl.searchResults > dt > img {
+    display: none;
+}
