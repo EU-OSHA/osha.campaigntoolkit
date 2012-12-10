@@ -38,12 +38,12 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
             'facebook-osha',
             title='Facebook for EU-OSHA photo competition',
             text=u'<dl> <dt>Organisation</dt> <dd>EU-OSHA</dd><dt>Country'
-                '</dt> <dd>International</dd> <dt>Description</dt> <dd><b>'
-                'Facebook</b> page of the EU-OSHA photo competition</dd> '
-                '<dt>Link</dt> <dd>'
-                '<a href="https://www.facebook.com/euoshaphotocompetition">'
-                'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
-                '</dl>'
+            '</dt> <dd>International</dd> <dt>Description</dt> <dd><b>'
+            'Facebook</b> page of the EU-OSHA photo competition</dd> '
+            '<dt>Link</dt> <dd>'
+            '<a href="https://www.facebook.com/euoshaphotocompetition">'
+            'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
+            '</dl>'
         )
 
     def test_upgrade_exists(self):

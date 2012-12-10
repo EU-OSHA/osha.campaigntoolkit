@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """The ToolExample content type."""
 
-from osha.campaigntoolkit import  _
+from osha.campaigntoolkit import _
 from plone.app.textfield import RichText
 from plone.app.dexterity.behaviors.exclfromnav import IExcludeFromNavigation
 from plone.directives import dexterity, form

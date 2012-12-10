@@ -34,7 +34,6 @@ def get_examples(context, limit=None):
     }
     if folder == context.portal_url.getPortalObject():
         return IContentListing(context.portal_catalog(query)[:limit])
-        
 
     if limit is not None:
         query['sort_limit'] = limit

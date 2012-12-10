@@ -30,9 +30,9 @@ class Overview(BrowserView):
 
     def sublists(self):
         query = {
-            'portal_type': 'Folder', 
+            'portal_type': 'Folder',
             'review_state': 'published',
             'sort_on': 'getObjPositionInParent'
-            }
+        }
         items = self.context.restrictedTraverse('@@folderListing')(**query)
         return self.two_column_list(items)

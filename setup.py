@@ -2,17 +2,19 @@ from setuptools import setup, find_packages
 import os
 
 version = '1.0'
+long_description = \
+    open("README.txt").read() + "\n" + \
+    open(os.path.join("docs", "HISTORY.txt")).read()
 
 setup(name='osha.campaigntoolkit',
       version=version,
       description="EU-OSHA Campaign Toolkit",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=long_description,
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
-        "Programming Language :: Python",
-        ],
+          "Programming Language :: Python",
+      ],
       keywords='',
       author='',
       author_email='',

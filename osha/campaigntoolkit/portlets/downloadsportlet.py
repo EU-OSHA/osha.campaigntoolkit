@@ -1,4 +1,4 @@
-from osha.campaigntoolkit import  _
+from osha.campaigntoolkit import _
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile

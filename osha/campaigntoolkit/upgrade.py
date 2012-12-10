@@ -32,7 +32,7 @@ def migrate_pages_to_toolexample(context):
         obj_id = page.getId()
         tmp_id = obj_id + '.tmp'
         rich_text = RichTextValue(text.decode('utf-8'), 'text/html',
-            'text/x-html-safe', 'utf-8')
+                                  'text/x-html-safe', 'utf-8')
 
         logger.info('Migrating page at %s' % page.absolute_url())
 
