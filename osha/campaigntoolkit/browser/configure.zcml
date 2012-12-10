@@ -4,6 +4,12 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="osha.campaigntoolkit">
 
+    <include package="z3c.jbot" file="meta.zcml" />
+
+    <browser:jbot
+        directory="overrides"
+        layer=".interfaces.ICampaignToolkitLayer" />
+
     <browser:resourceDirectory
         name="osha.campaigntoolkit.resources"
         directory="resources"

@@ -28,7 +28,7 @@ setup(name='osha.campaigntoolkit',
           'setuptools',
           'cioppino.twothumbs',
           'plone.app.dexterity [grok]',
-          # -*- Extra requirements: -*-
+          'z3c.jbot',
       ],
       extras_require={
           # list libs needed for testing this project

@@ -1,0 +1,6 @@
+<layers>
+  <layer
+    name="osha.campaigntoolkit"
+    interface="osha.campaigntoolkit.browser.interfaces.ICampaignToolkitLayer"
+  />
+</layers>
