@@ -107,7 +107,9 @@ def write(s):
 
 if not results:
     write('''<fieldset class="livesearchContainer">''')
-    write('''<legend id="livesearchLegend">%s</legend>''' % ts.translate(legend_livesearch, context=REQUEST))
+    #write('''<legend id="livesearchLegend">%s</legend>''' % ts.translate(legend_livesearch, context=REQUEST))
+    # XXX: for now just hardcode suggestions string
+    write('''<legend id="livesearchLegend">Suggestions</legend>''')
     write('''<div class="LSIEFix">''')
     write('''<div id="LSNothingFound">%s</div>''' % ts.translate(label_no_results_found, context=REQUEST))
     write('''<div class="LSRow">''')
@@ -119,7 +121,9 @@ if not results:
     write('''</fieldset>''')
 else:
     write('''<fieldset class="livesearchContainer">''')
-    write('''<legend id="livesearchLegend">%s</legend>''' % ts.translate(legend_livesearch, context=REQUEST))
+    #write('''<legend id="livesearchLegend">%s</legend>''' % ts.translate(legend_livesearch, context=REQUEST))
+    # XXX: for now just hardcode suggestions string
+    write('''<legend id="livesearchLegend">Suggestions</legend>''')
     write('''<div class="LSIEFix">''')
     write('''<ul class="LSTable">''')
     for result in results[:limit]:
