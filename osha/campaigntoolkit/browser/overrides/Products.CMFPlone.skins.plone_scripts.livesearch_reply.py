@@ -112,11 +112,14 @@ if not results:
     write('''<legend id="livesearchLegend">Suggestions</legend>''')
     write('''<div class="LSIEFix">''')
     write('''<div id="LSNothingFound">%s</div>''' % ts.translate(label_no_results_found, context=REQUEST))
-    write('''<div class="LSRow">''')
-    write('<a href="%s" style="font-weight:normal">%s</a>' %
-         (portal_url + '/@@search',
-          ts.translate(label_advanced_search, context=REQUEST)))
-    write('''</div>''')
+
+    # remove advanced search link completely
+    # write('''<div class="LSRow">''')
+    # write('<a href="%s" style="font-weight:normal">%s</a>' %
+    #      (portal_url + '/@@search',
+    #       ts.translate(label_advanced_search, context=REQUEST)))
+    # write('''</div>''')
+
     write('''</div>''')
     write('''</fieldset>''')
 else:
@@ -156,19 +159,23 @@ else:
         write('''</li>''')
         full_title, display_title, display_description = None, None, None
 
-    write('''<li class="LSRow">''')
-    write('<a href="%s" style="font-weight:normal">%s</a>' %
-         (portal_url + '/@@search',
-          ts.translate(label_advanced_search, context=REQUEST)))
-    write('''</li>''')
+        # remove advanced search link completely
+        # write('''<li class="LSRow">''')
+        # write('<a href="%s" style="font-weight:normal">%s</a>' %
+        #      (portal_url + '/@@search',
+        #       ts.translate(label_advanced_search, context=REQUEST)))
+        # write('''</li>''')
 
     if len(results) > limit:
         # add a more... row
-        write('''<li class="LSRow">''')
+        write('''<li class="LSRow"><hr/></li>''')
+
+        write('''<li class="LSRow LSRowExtra">''')
         searchquery = '@@search?SearchableText=%s&path=%s' % (searchterms, params['path'])
-        write('<a href="%s" style="font-weight:normal">%s</a>' % (
-                             searchquery,
-                             ts.translate(label_show_all, context=REQUEST)))
+        write('<a href="%s" style="font-weight:normal">%s &hellip;</a>' % (
+            searchquery,
+            ts.translate(label_show_all, context=REQUEST))
+        )
         write('''</li>''')
 
     write('''</ul>''')

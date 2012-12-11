@@ -388,6 +388,24 @@ dl.portlet a:hover {
 #portal-searchbox .searchSection {
     visibility: hidden;
 }
+
+#LSResult {
+    margin: -21px 0 0 -7em;
+    background-color: #CFDBE6;
+    border: 0.1em solid #CCCCCC;
+}
+#LSResult fieldset.livesearchContainer {
+    border: none;
+    margin: 0;
+}
+#livesearchLegend {
+    border: 1px solid black;
+}
+.LSRowExtra a {
+    color: black;
+}
+
+
 #visual-portal-wrapper {
     width: 960px;
     margin: 0 auto;
