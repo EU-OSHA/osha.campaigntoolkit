@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<object>
+  <hidden manager="plone.belowcontent" skinname="Campaign Toolkit">
+    <viewlet name="plone.nextprevious" />
+  </hidden>
+</object>
