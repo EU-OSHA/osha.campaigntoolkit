@@ -8,7 +8,7 @@ from plone.app.contentlisting.interfaces import IContentListing
 LIMIT = 4
 
 
-def get_examples(context, limit=None):
+def get_examples(context, limit=None, osh_related_only=False):
     """Return ToolExample objects contained in the provided context or its
     parent.
 
@@ -32,6 +32,9 @@ def get_examples(context, limit=None):
         'sort_on': 'Date',
         'sort_order': 'reverse'
     }
+    if osh_related_only:
+        query['OSH_related'] = True
+
     if folder == context.portal_url.getPortalObject():
         return IContentListing(context.portal_catalog(query)[:limit])
 
@@ -64,5 +67,7 @@ class ToolExamplesViewlet(base.ViewletBase):
     """Viewlet which shows the latest tool examples."""
 
     def latest_examples(self):
-        """Return the latest tool examples contained in this folder."""
-        return get_examples(self.context, limit=LIMIT)
+        """Return the latest OSH related tool examples
+        contained in this folder.
+        """
+        return get_examples(self.context, limit=LIMIT, osh_related_only=True)
