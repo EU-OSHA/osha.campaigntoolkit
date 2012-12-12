@@ -4,7 +4,8 @@ Changelog
 1.1dev (unreleased)
 -------------------
 
-- Redesign tool examples page (examples open in an overlay etc.)
+- Redesigned tool examples page (examples open in an overlay etc.)
+- Removed IExcludeFromNavigation behaviour for Tool Example content type.
 - Made the code pep8- and pyflakes-compliant
 - Moved code to Github
 - Visited links in content area now appear differently

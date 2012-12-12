@@ -18,13 +18,12 @@
   <property name="allow_discussion">False</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">osha.campaigntoolkit.toolexample.IToolExample</property> 
+  <property name="schema">osha.campaigntoolkit.toolexample.IToolExample</property>
   <property name="klass">osha.campaigntoolkit.toolexample.ToolExample</property>
 
   <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
      <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
-     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation" />"
   </property>
 
   <!-- View information -->
