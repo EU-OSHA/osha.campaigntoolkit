@@ -496,30 +496,6 @@ dl.portlet a:hover {
 }
 /* end toolstable */
 
-/* exampleslist */
-
-#content ul#examplelist {
-    margin-left: 0;
-}
-#examplelist img {
-    float: left;
-    margin: 0 1em 1em 0;
-    width: 80px;
-    clear: both;
-}
-#examplelist li:first-child {
-    border-top:0;
-}
-#examplelist li {
-    display: block;
-    margin: 1em 0 0 0;
-    padding: 1em 0 0 0 ;
-    clear: both;
-    border-top: 1px dashed #ccc;
-}
-
-/* end exampleslist */
-
 
 /* styles new header 2012/05/01***********************/
 
@@ -780,6 +756,36 @@ div.panes > div.examples {
     width: 27%;
     float: left;
 }
+
+div.examples > h3 {
+    font-size: 150%;
+    text-align: center;
+}
+
+/* exampleslist */
+
+#content ul#examplelist {
+    margin-left: 0;
+}
+#examplelist img {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 80px;
+    clear: both;
+}
+#examplelist li:first-child {
+    border-top:0;
+}
+#examplelist li {
+    display: block;
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0 ;
+    clear: both;
+    border-top: 1px dashed #ccc;
+
+}
+
+/* end exampleslist */
 
 
 /* On search results page don't display icons for content types

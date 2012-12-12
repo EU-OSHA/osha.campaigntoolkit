@@ -36,6 +36,7 @@
 
 
             <div class="examples">
+                <h3>Examples</h3>
                 <ul id="examplelist" tal:define="items view/examples"
                     tal:condition="items">
                     <li tal:repeat="item items">
