@@ -4,6 +4,8 @@ Changelog
 1.1dev (unreleased)
 -------------------
 
+- Tool examples which are OSH related have precedence in the examples listing
+  box displayed next to the tool itself
 - Redesigned tool examples page (examples open in an overlay etc.)
 - Removed IExcludeFromNavigation behaviour for Tool Example content type.
 - Made the code pep8- and pyflakes-compliant
