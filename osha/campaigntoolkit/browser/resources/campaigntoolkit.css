@@ -785,6 +785,9 @@ div.examples > h3 {
 
 }
 
+body.template-toolexamples div.overlay {
+    font-size: 100%;
+}
 /* end exampleslist */
 
 

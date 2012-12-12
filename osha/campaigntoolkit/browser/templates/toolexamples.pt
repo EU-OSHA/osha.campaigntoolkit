@@ -45,7 +45,8 @@
                              tal:condition="item_obj/image|nothing">
                             <img tal:replace="structure item_obj/@@images/image/mini" />
                         </div>
-                        <h3><a tal:attributes="href item/getURL"
+                        <h3><a tal:attributes="href item/getURL;
+                                               class string:exampleLink"
                                tal:content="item/Title">Title</a></h3>
                         <p tal:content="item/Description">Description</p>
                     </li>
