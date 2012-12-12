@@ -4,6 +4,7 @@ Changelog
 1.1dev (unreleased)
 -------------------
 
+- Removed IExcludeFromNavigation behaviour for Tool Example content type.
 - Made the code pep8- and pyflakes-compliant
 - Moved code to Github
 - Visited links in content area now appear differently
