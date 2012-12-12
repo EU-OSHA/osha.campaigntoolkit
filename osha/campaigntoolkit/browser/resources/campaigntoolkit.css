@@ -788,6 +788,10 @@ div.examples > h3 {
 body.template-toolexamples div.overlay {
     font-size: 100%;
 }
+
+body.template-toolexamples #highlightsContainer {
+    display: none;
+}
 /* end exampleslist */
 
 
