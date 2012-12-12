@@ -7,6 +7,7 @@ from plone.directives import dexterity, form
 from plone.namedfile.field import NamedBlobImage
 from plone.namedfile.interfaces import IImageScaleTraversable
 from zope.interface import implements
+from zope.schema import Bool
 
 
 class IToolExample(form.Schema, IImageScaleTraversable):
@@ -20,6 +21,11 @@ class IToolExample(form.Schema, IImageScaleTraversable):
     image = NamedBlobImage(
         title=_(u"Image"),
         required=False
+    )
+
+    OSH_related = Bool(
+        title=_(u"OSH related"),
+        description=_(u"Check to display this item higher in the listings.")
     )
 
 
