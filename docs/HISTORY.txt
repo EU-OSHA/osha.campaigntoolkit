@@ -1,6 +1,20 @@
 Changelog
 =========
 
+1.1dev (unreleased)
+-------------------
+
+- Made the code pep8- and pyflakes-compliant
+- Moved code to Github
+- Visited links in content area now appear differently
+- On the search results page content types's icons are now hidden, because not
+  all content types have a meaningful icon yet
+- "Search only in current section" checkbox under the portal search text field
+  is now hidden
+- Improved the appearance of Live Search results box
+- Fixed: Activating "Mark External Links" breaks tabs
+
+
 1.0dev (unreleased)
 -------------------
 
