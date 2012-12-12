@@ -62,7 +62,7 @@ dl.portlet a:visited {
 
 #content a:hover,
 dl.portlet a:hover {
-    color: yellow; 
+    color: yellow;
 }
 #content a:target {
     background-color: #ffb;
@@ -106,7 +106,7 @@ dl.portlet a:hover {
     font: 14px/100% Arial, Helvetica, sans-serif;
     padding: .5em 2em .55em;
     text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    -webkit-border-radius: .5em; 
+    -webkit-border-radius: .5em;
     -moz-border-radius: .5em;
     border-radius: .5em;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -484,7 +484,7 @@ dl.portlet a:hover {
 
 #toolstable {
     clear: both;
-    
+
 }
 #toolstable tr td {
     vertical-align: text-top;
@@ -768,14 +768,20 @@ ul.tabs a.xl.current { background-position: 0 -62px; }
     display:none;
 }
 div.panes > div { padding: 1em;}
-div.panes { 
-    border-left: 1px solid #999; 
-    border-right: 1px solid #999; 
-    border-bottom: 1px solid #999; 
-}
  /* end jquerytools tabs css */
 
- 
+div.panes > div.overview {
+    width: 65%;
+    float: left;
+}
+
+div.panes > div.examples {
+    border: 1px solid black;
+    width: 27%;
+    float: left;
+}
+
+
 /* On search results page don't display icons for content types
   until we have meaningful icons for ALL content types
   (we will later remove this rule) */
