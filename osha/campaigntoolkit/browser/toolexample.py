@@ -59,8 +59,23 @@ class ToolExamplesView(BrowserView):
         return self.index()
 
     def examples(self):
-        """Return tool examples contained in this folder."""
-        return get_examples(self.context)
+        """Return tool examples contained in this folder.
+
+        OSH related examples have sorting precedence over the others.
+        """
+        examples = get_examples(self.context)
+
+        # OSH related examples should come first
+        # (NOTE: items in list are already sorted by date)
+        osh_related, others = [], []
+
+        for item in examples:
+            if item.OSH_related:
+                osh_related.append(item)
+            else:
+                others.append(item)
+
+        return osh_related + others
 
 
 class ToolExamplesViewlet(base.ViewletBase):

@@ -30,6 +30,7 @@
         <p class="documentDescription" tal:content="here/Description" />
 
         <div class="panes">
+
             <div class="overview">
                 <div tal:content="structure here/getText">Body text</div>
             </div>
