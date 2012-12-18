@@ -1,0 +1,15 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="osha.campaigntoolkit">
+
+  <genericsetup:upgradeStep
+      source="001"
+      destination="002"
+      title="Upgrade from version 001 to version 002"
+      description="Remove &quot;Exclude from navigation&quot; behavior from all Tool Example content types"
+      profile="osha.campaigntoolkit:default"
+      handler=".upgrade_001_to_002.upgrade"
+      />
+
+</configure>

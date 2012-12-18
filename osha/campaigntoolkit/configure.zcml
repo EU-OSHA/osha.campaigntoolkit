@@ -4,7 +4,7 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:grok="http://namespaces.zope.org/grok"
-    i18n_domain="osha.campaigntoolkit">    
+    i18n_domain="osha.campaigntoolkit">
 
     <five:registerPackage package="." initialize=".initialize" />
 
@@ -12,6 +12,7 @@
     <includeDependencies package="." />
     <include package=".browser" />
     <include package=".portlets" />
+    <include package=".upgrades" />
 
     <grok:grok package="." />
 
