@@ -4,7 +4,6 @@
 from osha.campaigntoolkit.tests.base import IntegrationTestCase
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from Products.CMFCore.utils import getToolByName
 
 import unittest2 as unittest
 
@@ -45,15 +44,6 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
             'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
             '</dl>'
         )
-
-    def test_upgrade_exists(self):
-        """Test if the migrate_pages_to_toolexamples upgrade exists."""
-        portal_setup = getToolByName(self.portal, 'portal_setup')
-        upgrades = portal_setup.listUpgrades(
-            'osha.campaigntoolkit:default')
-        self.assertEqual(
-            upgrades[0]['title'],
-            'Migrate pages to ToolExample objects')
 
     def test_migrate_pages_to_toolexamples(self):
         """Test the upgrade."""
