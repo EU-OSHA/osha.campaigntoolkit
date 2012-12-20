@@ -18,3 +18,8 @@ def upgrade(context):
         'profile-osha.campaigntoolkit:default',
         'typeinfo'
     )
+
+    context.runImportStepFromProfile(
+        'profile-osha.campaigntoolkit:default',
+        'catalog'
+    )
