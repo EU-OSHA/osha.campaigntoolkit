@@ -1,0 +1,15 @@
+bin
+build
+develop-eggs
+dist
+downloads
+eggs
+extras/*
+include
+lib
+parts
+htmlcov
+var
+.*
+*.egg-info
+*.pyc
