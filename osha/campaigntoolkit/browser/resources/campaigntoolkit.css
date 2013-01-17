@@ -479,6 +479,9 @@ dl.portlet a:hover {
     font-style: italic;
 }
 
+.sublist a {
+    margin-right: 0.5em;
+}
 
 /* toolstable */
 
