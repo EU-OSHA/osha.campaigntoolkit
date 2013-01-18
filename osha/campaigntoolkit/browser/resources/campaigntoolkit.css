@@ -508,30 +508,6 @@ dl.portlet a:hover {
     padding: 0;
 
 }
-#intro{
-    border: 1px solid #003399;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: 1em;
-    margin-bottom: 2em;
-    height: 140px;
-    background: url("++resource++osha.campaigntoolkit.resources/intro01.jpg") no-repeat top right;
-}
-
-#intro #intro_more{
-   font-size: 80%;
-}
-
-#intro h1{
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #7f98ca;
-    font-style: italic;
-    font-size: 1.8em;
-    padding: 0 260px 0 0;
-    font-weight: normal;
-    margin: 0 0 10px 0;
-}
 
 #agency_fullname{
     text-transform: uppercase;

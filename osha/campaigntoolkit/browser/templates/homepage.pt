@@ -32,13 +32,9 @@
 <div metal:fill-slot="main">
     <div id="mainContent">
 
-      <div id="intro">
-        <a href="about">
-          <p id="agency_fullname">EU-OSHA Campaign Toolkit</p>
-          <h1>Find information for creating and running a Health &amp; Safety Campaign</h1>
-          <p id="intro_more">More&hellip;</p>
-        </a>
-      </div>
+      <h1 class="documentFirstHeading" id="parent-fieldname-title" tal:content="context/Title">
+      Find information for creating and running a Health &amp; Safety Campaign</h1>
+      <br/>
 
       <div id="in-focus-container">
         <h2>What you can expect</h2>
