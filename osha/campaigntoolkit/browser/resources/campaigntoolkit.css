@@ -509,6 +509,10 @@ dl.portlet a:hover {
 
 }
 
+body.section-front-page h1.documentFirstHeading {
+  font-size: 140%;
+}
+
 #agency_fullname{
     text-transform: uppercase;
     font-family: Verdana, Arial, Helvetica, sans-serif;
