@@ -76,13 +76,16 @@ class TestToolExampleViews(IntegrationTestCase):
         examples = get_examples(self.portal.folder)
         self.assertEqual(len(examples), 3)
 
-    def test_get_examples_non_folderish_context(self):
+    def test_get_examples_on_a_default_layout_item(self):
         """Test get_examples method for a non-folderish context."""
         from osha.campaigntoolkit.browser.toolexample import get_examples
 
-        # As the context use page contained in the folder with tool
-        # examples (to simulate usage of this method on a default folder view)
-        examples = get_examples(self.portal.folder['page1'])
+        examples = get_examples(self.portal.folder['example1'])
+        self.assertEqual(len(examples), 0)
+
+        # now set example1 to be default view for folder
+        self.portal['folder'].default_page = 'example1'
+        examples = get_examples(self.portal.folder['example1'])
         self.assertEqual(len(examples), 3)
 
 

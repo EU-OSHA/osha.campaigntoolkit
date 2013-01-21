@@ -16,6 +16,26 @@
             <img tal:replace="structure context/@@images/image/mini" />
         </div>
         <div tal:content="structure context/text/output|nothing"></div>
+
+        <div class="examples" tal:condition="view/examples">
+            <h3>Examples</h3>
+            <ul id="examplelist" tal:define="items view/examples"
+                tal:condition="items">
+                <li tal:repeat="item items">
+                    <div class="image-left"
+                         tal:define="item_obj item/getObject"
+                         tal:condition="item_obj/image|nothing">
+                        <img tal:replace="structure item_obj/@@images/image/mini" />
+                    </div>
+                    <h3><a tal:attributes="href item/getURL;
+                                           class string:exampleLink"
+                           tal:content="item/Title">Title</a></h3>
+                    <p tal:content="item/Description">Description</p>
+                </li>
+            </ul>
+            <div class="visualClear"><!-- --></div>
+        </div>
+
     </metal:content-core>
 </metal:content-core>
 
