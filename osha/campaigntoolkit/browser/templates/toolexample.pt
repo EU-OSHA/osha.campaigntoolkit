@@ -9,31 +9,38 @@
 
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
-        <a class="link-parent"
-           tal:attributes="href string:${context/aq_inner/aq_parent/absolute_url}"
-           i18n:translate="">Back to Overview</a>
-        <div class="image-right" tal:condition="context/image|nothing">
-            <img tal:replace="structure context/@@images/image/mini" />
-        </div>
-        <div tal:content="structure context/text/output|nothing"></div>
 
-        <div class="examples" tal:condition="view/examples">
-            <h3>Examples</h3>
-            <ul id="examplelist" tal:define="items view/examples"
-                tal:condition="items">
-                <li tal:repeat="item items">
-                    <div class="image-left"
-                         tal:define="item_obj item/getObject"
-                         tal:condition="item_obj/image|nothing">
-                        <img tal:replace="structure item_obj/@@images/image/mini" />
-                    </div>
-                    <h3><a tal:attributes="href item/getURL;
-                                           class string:exampleLink"
-                           tal:content="item/Title">Title</a></h3>
-                    <p tal:content="item/Description">Description</p>
-                </li>
-            </ul>
-            <div class="visualClear"><!-- --></div>
+        <div class="panes"
+             tal:define="examples view/examples;
+                         has_image context/image|nothing;">
+            <div class="overview">
+                <div tal:content="structure context/text/output|nothing"></div>
+            </div>
+
+            <div class="image-right" tal:condition="python: not examples and has_image">
+              <img tal:replace="structure context/@@images/image/mini" />
+            </div>
+
+            <div class="examples" tal:condition="examples">
+                <h3>Examples</h3>
+                <ul id="examplelist">
+                    <li tal:repeat="item examples">
+                        <div class="image-left"
+                             tal:define="item_obj item/getObject"
+                             tal:condition="item_obj/image|nothing">
+                          <a tal:attributes="href item/getURL;
+                                             class string:exampleLink">
+                            <img tal:replace="structure item_obj/@@images/image/thumb" />
+                          </a>
+                        </div>
+                        <h3><a tal:attributes="href item/getURL;
+                                       class string:exampleLink"
+                               tal:content="item/Title">Title</a></h3>
+                        <p tal:content="item/Description">Description</p>
+                    </li>
+                </ul>
+                <div class="visualClear"><!-- --></div>
+            </div>
         </div>
 
     </metal:content-core>

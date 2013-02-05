@@ -69,24 +69,28 @@ class TestToolExampleViews(IntegrationTestCase):
         self.assertEqual(examples[0].getId(), 'example3')
         self.assertEqual(examples[1].getId(), 'example2')
 
-    def test_get_examples_folderish_context(self):
-        """Test get_examples method for a folderish context."""
-        from osha.campaigntoolkit.browser.toolexample import get_examples
+    def test_examples_on_a_default_layout_item(self):
+        """Test examples method of the ToolExampleView for a non-folderish
+        context.
+        """
 
-        examples = get_examples(self.portal.folder)
-        self.assertEqual(len(examples), 3)
+        example2 = self.portal.folder['example2']
+        view = example2.restrictedTraverse('@@toolexample-view')
 
-    def test_get_examples_on_a_default_layout_item(self):
-        """Test get_examples method for a non-folderish context."""
-        from osha.campaigntoolkit.browser.toolexample import get_examples
-
-        examples = get_examples(self.portal.folder['example1'])
+        # if tool example is not set as default view, we should get an empty
+        # list
+        examples = view.examples()
         self.assertEqual(len(examples), 0)
 
-        # now set example1 to be default view for folder
-        self.portal['folder'].default_page = 'example1'
-        examples = get_examples(self.portal.folder['example1'])
-        self.assertEqual(len(examples), 3)
+        # now set example2 to be default view for folder
+        self.portal['folder'].default_page = 'example2'
+        examples = view.examples()
+
+        # example2 should be missing from the results, because it is set
+        # as default view
+        self.assertEqual(len(examples), 2)
+        self.assertEqual(examples[0].getId(), 'example1')
+        self.assertEqual(examples[1].getId(), 'example3')
 
 
 def test_suite():
