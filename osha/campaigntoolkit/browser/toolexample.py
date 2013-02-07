@@ -30,6 +30,8 @@ def get_examples(context, limit=None, osh_related_only=False):
     if context == context.portal_url.getPortalObject():
         return IContentListing(context.portal_catalog(query)[:limit])
 
+    if not context.restrictedTraverse('@@folderListing', None):
+        return None
     if limit is not None:
         query['sort_limit'] = limit
         return context.restrictedTraverse('@@folderListing')(**query)[:limit]
