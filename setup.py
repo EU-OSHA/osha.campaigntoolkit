@@ -26,7 +26,6 @@ setup(name='osha.campaigntoolkit',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'cioppino.twothumbs',
           'plone.app.dexterity [grok]',
           'z3c.jbot',
       ],

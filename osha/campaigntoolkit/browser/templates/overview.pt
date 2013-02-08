@@ -8,7 +8,6 @@
 <body>
 
 <metal:content-description fill-slot="content-description">
-    <div tal:content="structure context/@@rate-if-you-dare"/>
     <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
         Description
     </div>
