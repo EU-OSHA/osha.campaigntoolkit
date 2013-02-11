@@ -41,17 +41,17 @@
         <div class="in-focus" id="in-focus">
             <div id="infocus-1">
                 <img src="++resource++osha.campaigntoolkit.resources/knot.jpg" width="130" title="Very likely copyrighted, not to use in production">
-                <h3>How to run a campaign</h3>
+                <h3><a rel="nofollow" href="how-to-run-a-campaign">How to run a campaign</a></h3>
                 <p>A campaign is an organised course of action to achieve a particular goal.</p>
 				<p>No matter how large or small, it commonly uses a series of communications tools to
 				    share a message, 
 				    raise awareness and 
 				    shape the behavior of its target audience.</p>				
-                <p><a rel="nofollow" href="how-to-build-your-campaign">More&hellip;</a></p>
+                <p><a rel="nofollow" href="how-to-run-a-campaign">More&hellip;</a></p>
             </div>
             <div id="infocus-2">
                 <img src="++resource++osha.campaigntoolkit.resources/tools.jpg" width="150" title="Very likely copyrighted, not to use in production">
-                <h3>Tools</h3>
+                <h3><a rel="nofollow" href="tools">Tools</a></h3>
                 <p>This section contains a large number of real world campaign tool examples. Browse the tools and get an idea.</p>
                 <p><a rel="nofollow" href="tools">More&hellip;</a></p>
             </div>
