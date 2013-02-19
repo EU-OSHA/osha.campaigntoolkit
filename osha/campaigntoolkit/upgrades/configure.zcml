@@ -7,9 +7,18 @@
       source="001"
       destination="002"
       title="Upgrade from version 001 to version 002"
-      description="Remove &quot;Exclude from navigation&quot; behavior from all Tool Example content types"
+      description="Migrate pages to ToolExample objects"
       profile="osha.campaigntoolkit:default"
       handler=".upgrade_001_to_002.upgrade"
+      />
+
+  <genericsetup:upgradeStep
+      source="002"
+      destination="003"
+      title="Upgrade from version 002 to version 003"
+      description="Remove &quot;Exclude from navigation&quot; behavior from all Tool Example content types"
+      profile="osha.campaigntoolkit:default"
+      handler=".upgrade_002_to_003.upgrade"
       />
 
 </configure>
