@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Upgrade from version 001 to version 002."""
+"""Upgrade from version 002 to version 003."""
 
 from Products.CMFCore.utils import getToolByName
 
 
 def upgrade(context):
-    """Upgrade steps from 001 to 002."""
+    """Remove 'Exclude from navigation' behavior from all Tool Example
+    content types.
+    """
     catalog = getToolByName(context, "portal_catalog")
 
     brains = catalog(portal_type="osha.campaigntoolkit.toolexample")
