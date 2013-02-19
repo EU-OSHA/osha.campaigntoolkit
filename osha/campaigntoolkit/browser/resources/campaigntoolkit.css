@@ -734,10 +734,12 @@ div.panes > div.overview {
     float: left;
 }
 
-div.panes > div.examples {
+div.examples {
     border: 1px solid black;
     width: 27%;
-    float: left;
+    float: right;
+    margin: 1em;
+    padding: 1em;
 }
 
 div.examples > h3 {

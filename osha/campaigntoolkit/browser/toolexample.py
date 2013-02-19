@@ -41,65 +41,10 @@ def get_examples(context, limit=None, osh_related_only=False):
 
 
 class ToolExampleView(BrowserView):
-    """View for the ToolExample type.
-
-    Note that ToolExample type and the accompanying view are used in two
-    related, but different scenarios:
-     - to show general information about a Tool Example (e.g. 'Poster') with
-       a list of practical examples
-     - to show a practical example (e.g. 'Tips for the safe use of gloves')
-
-    We have the following structure:
-
-        Folder with Tool Examples -> toolexample1 as default view
-          |
-          |--toolexample1 -> ToolExampleView (tool example overview with a
-                                              list of practical examples)
-          |--toolexample2 -> ToolExampleView (practical example view)
-          |--toolexample3 -> ToolExampleView (practical example view)
-          |..
-
-    """
+    """View for the ToolExample type."""
 
     def __call__(self):
         return self.index()
-
-    def examples(self):
-        """Return tool examples contained in the parent folder.
-
-        Search for results only if context is set as default view on the
-        parent folder, otherwise return an empty list.
-
-        OSH related examples have sorting precedence over the others.
-        """
-        if not self._context_is_default_view():
-            return []
-
-        # OSH related examples should come first
-        # (NOTE: items in list are already sorted by date)
-        osh_related, others = [], []
-
-        for item in get_examples(aq_parent(self.context)):
-            # don't include the context
-            if item.id == self.context.id:
-                continue
-            if item.OSH_related:
-                osh_related.append(item)
-            else:
-                others.append(item)
-
-        return osh_related + others
-
-    def _context_is_default_view(self):
-        """Check if context is set as default view on the parent folder.
-        """
-        if (
-            hasattr(self.context.__parent__, 'default_page') and
-            self.context.__parent__.default_page == self.context.id
-        ):
-            return True
-        else:
-            return False
 
 
 class ToolExamplesHighlightsViewlet(base.ViewletBase):
@@ -116,3 +61,46 @@ class ToolExamplesHighlightsViewlet(base.ViewletBase):
         else:
             obj = self.context
         return get_examples(obj, limit=LIMIT, osh_related_only=True)
+
+
+class ToolExamplesViewlet(base.ViewletBase):
+    """Viewlet which shows the latest tool examples on the tool example index
+    page.
+    """
+
+    def __init__(self, context, request, view, manager=None):
+        super(ToolExamplesViewlet, self).__init__(
+            context, request, view, manager)
+        self.examples = self._latest_examples()
+
+    def _latest_examples(self):
+        """Return the latest OSH related tool examples contained in this
+        folder (and subfolders).
+
+        OSH related examples have sorting precedence over the others.
+        """
+        if not isDefaultPage(self.context, self.request):
+            return
+
+        # OSH related examples should come first
+        # (NOTE: items in list are already sorted by date)
+        osh_related, others = [], []
+
+        for item in get_examples(aq_parent(self.context), limit=LIMIT):
+            if item.OSH_related:
+                osh_related.append(item)
+            else:
+                others.append(item)
+
+        return osh_related + others
+
+    def render(self):
+        """Render the viewlet only if there is at least one tool example in
+        the folder and this page is set as default view for this folder.
+        """
+        if (
+            isDefaultPage(self.context, self.request) and
+            len(self.examples) > 0
+        ):
+            return super(ToolExamplesViewlet, self).render()
+        return ""

@@ -58,6 +58,15 @@
         permission="zope2.View"
         />
 
+    <browser:viewlet
+        name="osha.campaigntoolkit.toolexamples_viewlet"
+        for=" Products.ATContentTypes.interfaces.document.IATDocument"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+        class=".toolexample.ToolExamplesViewlet"
+        template="templates/toolexamples_viewlet.pt"
+        permission="zope2.View"
+        />
+
     <!-- marker interfaces -->
     <interface interface=".interfaces.ICanShowToolExamples" />
 
