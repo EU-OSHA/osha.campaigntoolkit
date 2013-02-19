@@ -102,12 +102,14 @@ class ToolExampleView(BrowserView):
             return False
 
 
-class ToolExamplesViewlet(base.ViewletBase):
-    """Viewlet which shows the latest tool examples."""
+class ToolExamplesHighlightsViewlet(base.ViewletBase):
+    """Viewlet which shows the latest tool examples, useful for displaying
+    e.g. on the front page.
+    """
 
     def latest_examples(self):
-        """Return the latest OSH related tool examples
-        contained in this folder.
+        """Return the latest OSH related tool examples contained in this
+        folder (and subfolders).
         """
         if isDefaultPage(self.context, self.request):
             obj = aq_parent(self.context)

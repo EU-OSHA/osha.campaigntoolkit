@@ -50,11 +50,11 @@
 
     <!-- viewlets -->
     <browser:viewlet
-        name="osha.campaigntoolkit.toolexamples_viewlet"
+        name="osha.campaigntoolkit.toolexamples_highlights_viewlet"
         for=".interfaces.ICanShowToolExamples"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class=".toolexample.ToolExamplesViewlet"
-        template="templates/toolexamples_viewlet.pt"
+        class=".toolexample.ToolExamplesHighlightsViewlet"
+        template="templates/toolexamples_highlights_viewlet.pt"
         permission="zope2.View"
         />
 
