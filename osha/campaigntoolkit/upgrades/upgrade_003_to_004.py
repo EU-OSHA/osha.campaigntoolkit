@@ -28,7 +28,7 @@ def upgrade(self):
                     container=folder,
                     type='Document',
                     title=default_page.title,
-                    text=default_page.text,
+                    text=default_page.text.raw,
                     description=default_page.description,
                 )
 
