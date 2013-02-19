@@ -4,4 +4,7 @@
   <hidden manager="plone.belowcontent" skinname="Campaign Toolkit">
     <viewlet name="plone.nextprevious" />
   </hidden>
+  <order manager="plone.belowcontentbody" skinname="Campaign Toolkit">
+    <viewlet name="osha.campaigntoolkit.toolexamples_viewlet" />
+  </order>
 </object>
