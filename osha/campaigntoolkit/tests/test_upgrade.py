@@ -45,12 +45,12 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
             '</dl>'
         )
 
-    def test_migrate_pages_to_toolexamples(self):
-        """Test the upgrade."""
-        from osha.campaigntoolkit.upgrade import migrate_pages_to_toolexample
+    def test_upgrade_001_to_002(self):
+        """Test migration of pages to toolexamples."""
+        from osha.campaigntoolkit.upgrades import upgrade_001_to_002
 
         # Run the migration
-        migrate_pages_to_toolexample(self.portal)
+        upgrade_001_to_002.upgrade(self.portal)
         page = self.portal['page1']
         toolexample = self.portal['tools']['folder2']['facebook-osha']
 

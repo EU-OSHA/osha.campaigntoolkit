@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Osha Campaigntoolkit upgrades."""
+"""Upgrade from version 001 to version 002."""
 
 from Acquisition import aq_inner
 from Acquisition import aq_parent
@@ -13,7 +13,7 @@ import logging
 logger = logging.getLogger('osha.campaigntoolkit.upgrades')
 
 
-def migrate_pages_to_toolexample(context):
+def upgrade(context):
     """Migrate all tool examples that were created as Pages to ToolExample
     objects.
     """

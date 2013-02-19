@@ -4,6 +4,15 @@
   i18n_domain="osha.campaigntoolkit">
 
   <genericsetup:upgradeStep
+      source="001"
+      destination="002"
+      title="Upgrade from version 001 to version 002"
+      description="Migrate pages to ToolExample objects"
+      profile="osha.campaigntoolkit:default"
+      handler=".upgrade_001_to_002.upgrade"
+      />
+
+  <genericsetup:upgradeStep
       source="002"
       destination="003"
       title="Upgrade from version 002 to version 003"
