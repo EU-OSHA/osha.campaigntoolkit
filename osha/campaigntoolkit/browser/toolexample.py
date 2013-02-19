@@ -1,5 +1,6 @@
 from Acquisition import aq_parent
 from plone.app.layout.viewlets import common as base
+from Products.CMFPlone.utils import isDefaultPage
 from Products.Five.browser import BrowserView
 from plone.app.contentlisting.interfaces import IContentListing
 
@@ -108,4 +109,8 @@ class ToolExamplesViewlet(base.ViewletBase):
         """Return the latest OSH related tool examples
         contained in this folder.
         """
-        return get_examples(self.context, limit=LIMIT, osh_related_only=True)
+        if isDefaultPage(self.context, self.request):
+            obj = aq_parent(self.context)
+        else:
+            obj = self.context
+        return get_examples(obj, limit=LIMIT, osh_related_only=True)
