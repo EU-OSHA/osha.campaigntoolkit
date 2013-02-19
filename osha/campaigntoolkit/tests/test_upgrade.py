@@ -2,13 +2,14 @@
 """Test Osha Campaign Toolkit upgrades."""
 
 from osha.campaigntoolkit.tests.base import IntegrationTestCase
+from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 
 import unittest2 as unittest
 
 
-class TestMigratePagesToToolExample(IntegrationTestCase):
+class TestUpgrade001to002(IntegrationTestCase):
     """Test migration to ToolExample objects."""
 
     def setUp(self):
@@ -45,7 +46,7 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
             '</dl>'
         )
 
-    def test_upgrade_001_to_002(self):
+    def test_upgrade(self):
         """Test migration of pages to toolexamples."""
         from osha.campaigntoolkit.upgrades import upgrade_001_to_002
 
@@ -77,6 +78,81 @@ class TestMigratePagesToToolExample(IntegrationTestCase):
         # The .tmp object shouldn't be there
         self.assertEquals(self.portal['tools']['folder2'].keys(),
                           ['facebook-osha'])
+
+
+class TestUpgrade003to004(IntegrationTestCase):
+    """Test migration of index pages from ToolExample objects to Documents.
+    """
+
+    def setUp(self):
+        """Custom shared utility setup for tests."""
+        self.portal = self.layer['portal']
+        self._create_content()
+
+    def _create_content(self):
+        """Create content for testing - two folders, one normal tool example
+        and one tool example that is set as default view for the folder.
+
+        portal
+         |--> tool1
+         |--> folder1
+               |--> folder2
+                     |--> tool2 (set as default view for folder2)
+
+        """
+        setRoles(self.portal, TEST_USER_ID, ('Manager',))
+
+        self.folder1 = api.content.create(
+            container=self.portal, type='Folder', id='folder1')
+        self.tool1 = api.content.create(
+            container=self.portal,
+            type='osha.campaigntoolkit.toolexample',
+            id='tool1'
+        )
+        self.folder2 = api.content.create(
+            container=self.folder1, type='Folder', id='folder2')
+        self.tool2 = api.content.create(
+            container=self.folder2,
+            type='osha.campaigntoolkit.toolexample',
+            id='tool2',
+            title='Facebook for EU-OSHA photo competition',
+            text=u'<dl> <dt>Organisation</dt> <dd>EU-OSHA</dd><dt>Country'
+            '</dt> <dd>International</dd> <dt>Description</dt> <dd><b>'
+            'Facebook</b> page of the EU-OSHA photo competition</dd> '
+            '<dt>Link</dt> <dd>'
+            '<a href="https://www.facebook.com/euoshaphotocompetition">'
+            'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
+            '</dl>'
+        )
+        self.folder2.default_page = self.tool2.id
+
+    def test_upgrade(self):
+        """Test migration of pages to toolexamples."""
+        from osha.campaigntoolkit.upgrades import upgrade_003_to_004
+
+        # Run the migration
+        upgrade_003_to_004.upgrade(self.portal)
+        tool1 = self.portal['tool1']
+        tool2 = self.folder2['tool2']
+
+        # The normal toolexample should stay as it was
+        self.assertEqual(
+            tool1.portal_type, 'osha.campaigntoolkit.toolexample')
+
+        # The ToolExample index page should be migrated to a Document
+        self.assertEqual(tool2.portal_type, 'Document')
+        self.assertEqual(tool2.id, 'tool2')
+        self.assertEqual(tool2.title, 'Facebook for EU-OSHA photo competition')
+        self.assertEqual(
+            tool2.getText(),
+            u'<dl> <dt>Organisation</dt> <dd>EU-OSHA</dd><dt>Country'
+            '</dt> <dd>International</dd> <dt>Description</dt> <dd><b>'
+            'Facebook</b> page of the EU-OSHA photo competition</dd> '
+            '<dt>Link</dt> <dd>'
+            '<a href="https://www.facebook.com/euoshaphotocompetition">'
+            'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
+            '</dl>')
+        self.assertEqual(len(self.folder2.keys()), 1)
 
 
 def test_suite():

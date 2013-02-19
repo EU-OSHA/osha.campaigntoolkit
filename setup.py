@@ -26,6 +26,7 @@ setup(name='osha.campaigntoolkit',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.api',
           'plone.app.dexterity [grok]',
           'z3c.jbot',
       ],

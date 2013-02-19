@@ -21,4 +21,13 @@
       handler=".upgrade_002_to_003.upgrade"
       />
 
+  <genericsetup:upgradeStep
+      source="003"
+      destination="004"
+      title="Upgrade from version 003 to version 004"
+      description="Convert index pages from Tool Examples to Documents."
+      profile="osha.campaigntoolkit:default"
+      handler=".upgrade_003_to_004.upgrade"
+      />
+
 </configure>
