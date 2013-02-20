@@ -734,6 +734,7 @@ div.panes > div.overview {
     float: left;
 }
 
+/* tool examples */
 div.examples-portlet {
     border: 1px solid black;
     width: 27%;
@@ -741,10 +742,15 @@ div.examples-portlet {
     margin: 1em;
     padding: 1em;
 }
-
 div.examples-portlet > h3 {
     font-size: 150%;
     text-align: center;
+}
+.toolexample-content {
+    margin-top: 1em;
+}
+#content .download-links {
+    list-style: none;
 }
 
 /* exampleslist */

@@ -10,15 +10,41 @@
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
 
-      <div tal:content="structure context/text/output|nothing"></div>
+        <div class="toolexample-content">
 
-      <div class="image-right"
-           tal:define="has_image context/image|nothing;"
-           tal:condition="has_image">
-          <img tal:replace="structure context/@@images/image/mini" />
-      </div>
+            <div class="image-right"
+                 tal:define="has_image context/image|nothing;"
+                 tal:condition="has_image">
+              <img tal:replace="structure context/@@images/image/mini" />
+            </div>
 
-      <div class="visualClear"><!-- --></div>
+            <div tal:replace="structure context/text/output|nothing"></div>
+
+            <dl tal:define="downloads view/downloads"
+                tal:condition="downloads">
+                <dt><span i18n:translate="label_downloads">
+                    Downloads</span>:</dt>
+                <ul class="download-links">
+                    <li tal:repeat="item downloads">
+                        <img tal:replace="structure item/getIcon" />
+                        <a href="#"
+                           tal:attributes="title item/Description;
+                                           href string: ${item/getURL}/download;"
+                           tal:content="item/Title"
+                           i18n:translate=""
+                           i18n:attributes="title">
+                          Download
+                        </a>
+                        (<span tal:define="item_obj item/getObject"
+                               tal:replace="item_obj/getContentType">size</span>,
+                        <span tal:replace="item/getSize">size</span>)
+                    </li>
+                </ul>
+            </dl>
+
+            <div class="visualClear"><!-- --></div>
+
+        </div>
 
     </metal:content-core>
 </metal:content-core>

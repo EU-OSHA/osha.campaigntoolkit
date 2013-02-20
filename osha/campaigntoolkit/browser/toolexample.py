@@ -46,6 +46,10 @@ class ToolExampleView(BrowserView):
     def __call__(self):
         return self.index()
 
+    def downloads(self):
+        return self.context.restrictedTraverse('@@folderListing')(
+            portal_type=('File', 'Image',))
+
 
 class ToolExamplesHighlightsViewlet(base.ViewletBase):
     """Viewlet which shows the latest tool examples, useful for displaying
