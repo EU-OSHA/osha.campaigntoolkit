@@ -1,4 +1,4 @@
-<div class="examples"
+<div class="examples examples-portlet"
      tal:define="examples view/examples"
      tal:condition="examples">
     <h3>Examples</h3>
@@ -7,13 +7,11 @@
             <div class="image-left"
                  tal:define="item_obj item/getObject"
                  tal:condition="item_obj/image|nothing">
-                <a tal:attributes="href item/getURL;
-                                   class string:exampleLink">
+                <a class="exampleLink" tal:attributes="href item/getURL">
                     <img tal:replace="structure item_obj/@@images/image/thumb" />
                 </a>
             </div>
-            <h3><a tal:attributes="href item/getURL;
-                                   class string:exampleLink"
+            <h3><a class="exampleLink" tal:attributes="href item/getURL"
                    tal:content="item/Title">Title</a></h3>
             <p tal:content="item/Description">Description</p>
         </li>

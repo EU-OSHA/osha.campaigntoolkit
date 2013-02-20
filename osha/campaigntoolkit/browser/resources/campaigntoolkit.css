@@ -734,7 +734,7 @@ div.panes > div.overview {
     float: left;
 }
 
-div.examples {
+div.examples-portlet {
     border: 1px solid black;
     width: 27%;
     float: right;
@@ -742,7 +742,7 @@ div.examples {
     padding: 1em;
 }
 
-div.examples > h3 {
+div.examples-portlet > h3 {
     font-size: 150%;
     text-align: center;
 }
