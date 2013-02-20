@@ -736,15 +736,18 @@ div.panes > div.overview {
 
 /* tool examples */
 div.examples-portlet {
-    border: 1px solid black;
-    width: 27%;
+    width: 40%;
     float: right;
-    margin: 1em;
-    padding: 1em;
+    margin: 0 0 2em 2em;
 }
 div.examples-portlet > h3 {
-    font-size: 150%;
-    text-align: center;
+    background-color: #DDDDDD;
+    color: #003399;
+    font-weight: normal;
+    line-height: 2em;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding-left: 5px;
 }
 .toolexample-content {
     margin-top: 1em;
@@ -752,30 +755,47 @@ div.examples-portlet > h3 {
 #content .download-links {
     list-style: none;
 }
-
-/* exampleslist */
-
 #content ul#examplelist {
     margin-left: 0;
-}
-#examplelist img {
-    float: left;
-    margin: 0 1em 1em 0;
-    width: 80px;
-    height: auto;
-    clear: both;
+    padding: 0 1.25em 1.25em;
+    background-color: #EEEEEE;
 }
 #examplelist li:first-child {
     border-top:0;
 }
 #examplelist li {
     display: block;
-    margin: 1em 0 0 0;
-    padding: 1em 0 0 0 ;
+    padding: 1.5em 0 0 0 ;
     clear: both;
-    border-top: 1px dashed #ccc;
-
 }
+#content a.exampleHeading {
+    float: left;
+    padding-right: 3%;
+    width: 47%;
+    color: black;
+    font-weight: bold;
+    font-size: 90%;
+    border: none !important;
+}
+.exampleImage {
+    float: left;
+    width: 50%;
+}
+#content .exampleImage a{
+    float: left;
+    width: 100%;
+    border: none !important;
+}
+.exampleImage img {
+    float: left;
+    height: auto;
+    width: 100%;
+}
+.exampleDescription {
+    font-size: 90%;
+    margin-top: 0.5em;
+}
+
 
 body.template-toolexamples div.overlay {
     font-size: 100%;

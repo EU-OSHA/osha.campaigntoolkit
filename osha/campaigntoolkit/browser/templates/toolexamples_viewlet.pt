@@ -1,19 +1,35 @@
 <div class="examples examples-portlet"
      tal:define="examples view/examples"
      tal:condition="examples">
-    <h3>Examples</h3>
+    <h3 i18n:translate="label_examples_from_previous_campaigns">
+        Examples from previous campaigns</h3>
     <ul id="examplelist">
         <li tal:repeat="item examples">
-            <div class="image-left"
+
+            <a class="exampleHeading exampleLink"
+               tal:attributes="href item/getURL"
+               tal:define="ploneview nocall:context/@@plone;
+                           title item/Title;
+                           short_title python:ploneview.cropText(title, length=65, ellipsis='...');"
+               tal:content="short_title">Title</a>
+
+            <div class="exampleImage"
                  tal:define="item_obj item/getObject"
                  tal:condition="item_obj/image|nothing">
                 <a class="exampleLink" tal:attributes="href item/getURL">
-                    <img tal:replace="structure item_obj/@@images/image/thumb" />
+                    <img tal:define="scale item_obj/@@images"
+                         tal:replace="structure python: scale.scale('image', width=200, height=80, direction='down').tag()" />
                 </a>
             </div>
-            <h3><a class="exampleLink" tal:attributes="href item/getURL"
-                   tal:content="item/Title">Title</a></h3>
-            <p tal:content="item/Description">Description</p>
+
+            <div class="visualClear"><!-- --></div>
+
+            <p class="exampleDescription"
+               tal:define="ploneview nocall:context/@@plone;
+                           description item/Description;
+                           short_desc python:ploneview.cropText(description, length=100, ellipsis='...');"
+               tal:content="short_desc">Description</p>
+
         </li>
     </ul>
     <div class="visualClear"><!-- --></div>
