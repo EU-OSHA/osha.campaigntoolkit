@@ -5,6 +5,7 @@ from osha.campaigntoolkit.tests.base import IntegrationTestCase
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.textfield.value import RichTextValue
 
 import unittest2 as unittest
 
@@ -116,13 +117,15 @@ class TestUpgrade003to004(IntegrationTestCase):
             type='osha.campaigntoolkit.toolexample',
             id='tool2',
             title='Facebook for EU-OSHA photo competition',
-            text=u'<dl> <dt>Organisation</dt> <dd>EU-OSHA</dd><dt>Country'
-            '</dt> <dd>International</dd> <dt>Description</dt> <dd><b>'
-            'Facebook</b> page of the EU-OSHA photo competition</dd> '
-            '<dt>Link</dt> <dd>'
-            '<a href="https://www.facebook.com/euoshaphotocompetition">'
-            'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
-            '</dl>'
+            text=RichTextValue(
+                u'<dl> <dt>Organisation</dt> <dd>EU-OSHA</dd><dt>Country'
+                '</dt> <dd>International</dd> <dt>Description</dt> <dd><b>'
+                'Facebook</b> page of the EU-OSHA photo competition</dd> '
+                '<dt>Link</dt> <dd>'
+                '<a href="https://www.facebook.com/euoshaphotocompetition">'
+                'https://www.facebook.com/euoshaphotocompetition"</a></dd>'
+                '</dl>'
+            )
         )
         self.folder2.default_page = self.tool2.id
 
