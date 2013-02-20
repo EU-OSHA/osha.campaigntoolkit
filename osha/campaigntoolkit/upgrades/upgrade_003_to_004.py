@@ -5,7 +5,17 @@ from plone import api
 from zope.globalrequest import getRequest
 
 
-def upgrade(self):
+def upgrade(context):
+    """Upgrade from version 003 to version 004."""
+
+    # Apply browser layer so z3c.jbot comes in effect
+    context.runImportStepFromProfile(
+        'profile-osha.campaigntoolkit:default', 'browserlayer')
+
+    migrate_index_pages()
+
+
+def migrate_index_pages():
     """Convert index pages from Tool Examples to Documents."""
     catalog = api.portal.get_tool('portal_catalog')
     brains = catalog(portal_type='Folder')
