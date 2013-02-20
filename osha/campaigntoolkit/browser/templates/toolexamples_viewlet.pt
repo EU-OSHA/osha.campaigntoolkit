@@ -10,7 +10,7 @@
                tal:attributes="href item/getURL"
                tal:define="ploneview nocall:context/@@plone;
                            title item/Title;
-                           short_title python:ploneview.cropText(title, length=65, ellipsis='...');"
+                           short_title python:ploneview.cropText(title, length=45, ellipsis='...');"
                tal:content="short_title">Title</a>
 
             <div class="exampleImage"

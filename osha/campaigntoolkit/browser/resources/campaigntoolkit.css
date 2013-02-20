@@ -780,6 +780,7 @@ div.examples-portlet > h3 {
 .exampleImage {
     float: left;
     width: 50%;
+    padding-top: 0.3em;
 }
 #content .exampleImage a{
     float: left;
