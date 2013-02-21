@@ -129,12 +129,13 @@ class TestUpgrade003to004(IntegrationTestCase):
         )
         self.folder2.default_page = self.tool2.id
 
-    def test_upgrade(self):
+    def test_migrate_index_pages(self):
         """Test migration of pages to toolexamples."""
-        from osha.campaigntoolkit.upgrades import upgrade_003_to_004
+        from osha.campaigntoolkit.upgrades.upgrade_003_to_004 import \
+            migrate_index_pages
 
-        # Run the migration
-        upgrade_003_to_004.upgrade(self.portal)
+        # migrate pages
+        migrate_index_pages()
         tool1 = self.portal['tool1']
         tool2 = self.folder2['tool2']
 
