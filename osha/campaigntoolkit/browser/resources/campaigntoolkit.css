@@ -814,3 +814,15 @@ body.template-toolexamples #highlightsContainer {
 #search-results dl.searchResults > dt > img {
     display: none;
 }
+
+/* collapsible */
+.readmore-item .description {
+    padding-bottom: 0.5em;
+}
+.collapse-head {
+    background: url('arrow-up.png') no-repeat center right;
+    padding-right: 1em;
+}
+.collapse-head.collapsed {
+    background: url('arrow-down.png') no-repeat center right;
+}

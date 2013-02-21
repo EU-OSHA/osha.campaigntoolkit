@@ -31,6 +31,24 @@
         permission="zope2.View"
         />
 
+    <browser:page
+        for="Products.CMFCore.interfaces.IFolderish"
+        name="readmore-view"
+        class=".readmore.ReadMoreView"
+        template="templates/readmore_view.pt"
+        permission="zope2.View"
+        layer=".interfaces.ICampaignToolkitLayer"
+        />
+
+    <browser:menuItem
+        for="Products.CMFCore.interfaces.IFolderish"
+        menu="plone_displayviews"
+        title="Readmore view (with collapsible sections)"
+        action="@@readmore-view"
+        description="View for displaying the content of all pages in this folder on one page, with collapsible sections."
+        layer=".interfaces.ICampaignToolkitLayer"
+        />
+
     <!-- two column overview for folders -->
     <browser:page
         for="Products.CMFCore.interfaces.IFolderish"

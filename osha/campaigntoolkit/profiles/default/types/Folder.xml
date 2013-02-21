@@ -2,5 +2,6 @@
 <object name="Folder">
   <property name="view_methods" purge="False">
     <element value="overview" />
+    <element value="readmore-view" />
   </property>
 </object>
