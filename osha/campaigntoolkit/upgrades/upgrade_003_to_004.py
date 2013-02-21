@@ -12,6 +12,16 @@ def upgrade(context):
     context.runImportStepFromProfile(
         'profile-osha.campaigntoolkit:default', 'browserlayer')
 
+    # Import relevant import steps to make the 'Read more' view work - #6699
+    context.runImportStepFromProfile(
+        'profile-osha.campaigntoolkit:default',
+        'typeinfo'
+    )
+    context.runImportStepFromProfile(
+        'profile-osha.campaigntoolkit:default',
+        'jsregistry'
+    )
+
     migrate_index_pages()
 
 

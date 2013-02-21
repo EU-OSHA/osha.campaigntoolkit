@@ -25,7 +25,7 @@
       source="003"
       destination="004"
       title="Upgrade from version 003 to version 004"
-      description="Convert index pages from Tool Examples to Documents."
+      description="Convert index pages from Tool Examples to Documents and add 'Read more' view"
       profile="osha.campaigntoolkit:default"
       handler=".upgrade_003_to_004.upgrade"
       />
