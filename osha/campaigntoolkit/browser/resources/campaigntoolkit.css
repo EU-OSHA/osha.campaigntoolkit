@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "Abadi";
-	src: url("/fonts/Abadi-MT-Std-Condensed Light.otf")
+	src: url("++resource++osha.campaigntoolkit.resources/fonts/Abadi-MT-Std-Condensed Light.otf")
 }
 
 body {
-    background: transparent url('http://osha.europa.eu/top.gif') repeat-x top left;
+    background: transparent url('++resource++osha.campaigntoolkit.resources/top.gif') repeat-x top left;
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
 
 }
@@ -361,13 +361,13 @@ dl.portlet a:hover {
 /* end Button */
 
 #portal-logo {
-    background: url('http://oshawebdev00.fe.rzob.gocept.net/logoinner2.gif') no-repeat scroll right bottom white;
+    background: url('++resource++osha.campaigntoolkit.resources/logoinner2.gif') no-repeat scroll right bottom white;
     padding: 18px 30px 10px 10px;
     float: left;
     margin-top: 0;
 }
 #portal-top {
-    background: transparent url('http://oshawebdev00.fe.rzob.gocept.net/headereurope.gif') no-repeat top right;
+    background: transparent url('++resource++osha.campaigntoolkit.resources/headereurope.gif') no-repeat top right;
 }
 #portal-header:after {
     content: "Campaign Toolkit";
@@ -824,9 +824,9 @@ body.template-toolexamples #highlightsContainer {
     padding-bottom: 0.5em;
 }
 .collapse-head {
-    background: url('arrow-up.png') no-repeat center right;
+    background: url('++resource++osha.campaigntoolkit.resources/arrow-up.png') no-repeat center right;
     padding-right: 1em;
 }
 .collapse-head.collapsed {
-    background: url('arrow-down.png') no-repeat center right;
+    background: url('++resource++osha.campaigntoolkit.resources/arrow-down.png') no-repeat center right;
 }
