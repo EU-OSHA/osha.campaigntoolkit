@@ -499,14 +499,17 @@ dl.portlet a:hover {
 }
 /* end toolstable */
 
+/* make sure font size in overlay is the same as on the rest of the page */
+.pb-ajax #content{
+    font-size: 100%;
+}
+
 
 /* styles new header 2012/05/01***********************/
 
 
 #content{
-
     padding: 0;
-
 }
 
 body.section-front-page h1.documentFirstHeading {
@@ -618,11 +621,6 @@ body.section-front-page h1.documentFirstHeading {
    margin: 0 0 0.5em 0.5em;
 }
 
-#in-focus  {
-   font-size: 85%;
-   line-height: 160%;
-}
-
 #in-focus  h3{
    margin: 0 0 0.5em 0;
    color:#003399;
@@ -645,6 +643,8 @@ body.section-front-page h1.documentFirstHeading {
     float: right;
     padding-left: 2%;
 }
+
+
 
 /* jquerytools tabs css */
 /* root element for tabs  */
