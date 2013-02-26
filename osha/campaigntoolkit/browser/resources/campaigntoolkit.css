@@ -504,6 +504,10 @@ dl.portlet a:hover {
     font-size: 100%;
 }
 
+/* Hide Description on the toolexample overlay */
+.pb-ajax .documentDescription {
+    display: none;
+}
 
 /* styles new header 2012/05/01***********************/
 

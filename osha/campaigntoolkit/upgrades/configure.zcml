@@ -30,4 +30,13 @@
       handler=".upgrade_003_to_004.upgrade"
       />
 
+  <genericsetup:upgradeStep
+      source="004"
+      destination="005"
+      title="Upgrade from version 004 to version 005"
+      description="Set the Description attribute of ToolExamples based on the main text"
+      profile="osha.campaigntoolkit:default"
+      handler=".upgrade_004_to_005.upgrade"
+      />
+
 </configure>

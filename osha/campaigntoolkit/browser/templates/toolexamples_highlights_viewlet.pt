@@ -22,7 +22,10 @@
                     <span tal:replace="python: toLocalizedTime(item.CreationDate())">01.02.2012</span>
                 </p>
                 <p class="teaser_content"
-                   tal:content="item/Description">Description</p>
+                   tal:define="ploneview nocall:context/@@plone;
+                               description item/Description;
+                               short_desc python:ploneview.cropText(description, length=400, ellipsis='...');"
+                   tal:content="short_desc">Description</p>
                 <p class="teaser_more">
                     <a class="exampleLink more"
                        tal:attributes="href item/getURL"
