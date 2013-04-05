@@ -68,6 +68,13 @@ dl.portlet a:hover {
     background-color: #ffb;
 }
 
+/* google translate viewlet in the header */
+div#googletranslate{
+    display: block;
+    float: right;
+    margin: 1px 62px 0 201px;
+}
+
 /* Footer */
 #portal-siteactions {
     border-top: 1px solid #ddd;
@@ -362,19 +369,20 @@ dl.portlet a:hover {
 
 #portal-logo {
     background: url('++resource++osha.campaigntoolkit.resources/logoinner2.gif') no-repeat scroll right bottom white;
-    padding: 18px 30px 10px 10px;
+    padding: 4px 30px 10px 10px;
     float: left;
     margin-top: 0;
 }
 #portal-top {
-    background: transparent url('++resource++osha.campaigntoolkit.resources/headereurope.gif') no-repeat top right;
+    background: transparent url('++resource++osha.campaigntoolkit.resources/headereurope.gif') no-repeat scroll right 14px;
+    padding: 14px 0;
 }
 #portal-header:after {
     content: "Campaign Toolkit";
     display:block;
     text-align:right;
     text-shadow: 0 4px 4px #000;
-    margin-top: 120px;
+    margin-top: 106px;
 /*    color: #b1c6ff;*/
     color: white;
     font-size: 22px;
@@ -383,7 +391,7 @@ dl.portlet a:hover {
     @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); }
 }
 #portal-searchbox {
-    padding-top: 30px;
+    padding-top: 16px;
 }
 #portal-searchbox .searchSection {
     visibility: hidden;

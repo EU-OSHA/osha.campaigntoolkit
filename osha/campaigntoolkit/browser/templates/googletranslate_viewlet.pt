@@ -1,0 +1,15 @@
+<div id="googletranslate">
+
+    <div id="google_translate_element"></div>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'bg,da,de,et,fi,fr,el,ga,it,is,lv,lt,mt,no,nl,pl,pt,ro,sv,sk,sl,es,cs,hu',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
