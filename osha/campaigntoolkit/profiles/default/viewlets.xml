@@ -12,6 +12,7 @@
     <viewlet name="plone.skip_links" />
     <viewlet name="osha.campaigntoolkit.toolexamples_viewlet" />
     <viewlet name="plone.searchbox" />
+    <viewlet name="osha.campaigntoolkit.gotocorporate_viewlet" />
     <viewlet name="plone.global_sections" />
   </order>
   <hidden manager="plone.portalheader" skinname="Campaign Toolkit">
