@@ -72,7 +72,18 @@ dl.portlet a:hover {
 div#googletranslate{
     display: block;
     float: right;
-    margin: 1px 62px 0 201px;
+    margin: 1px 80px 0 201px;
+}
+
+/* back to corporate site */
+div#gotocorporate {
+    float:left;
+    margin-top: 2.4em;
+    font-size: 80%
+}
+
+div#gotocorporate .external-marker{
+    font-size: 65%;
 }
 
 /* Footer */
@@ -376,6 +387,23 @@ div#googletranslate{
 #portal-top {
     background: transparent url('++resource++osha.campaigntoolkit.resources/headereurope.gif') no-repeat scroll right 14px;
     padding: 14px 0;
+}
+#portal-top div.width-full {
+    width: 99%;
+}
+#portal-top div.position-0 {
+    margin-left: -99%;
+}
+#portal-top input.searchField {
+    -moz-appearance: searchfield;
+    -webkit-appearance: searchfield;
+    padding-left: 0.5em;
+}
+#portal-top .goog-te-combo {
+    width: 200px;
+}
+#portal-top #searchGadget {
+    width: 190px;
 }
 #portal-header:after {
     content: "Campaign Toolkit";

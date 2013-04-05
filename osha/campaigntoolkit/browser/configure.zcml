@@ -89,11 +89,19 @@
         name="osha.campaigntoolkit.toolexamples_viewlet"
         for="*"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".googletranslate.GoogletranslateViewlet"
+        class=".viewlets.GoogletranslateViewlet"
         template="templates/googletranslate_viewlet.pt"
         permission="zope2.View"
         />
 
+    <browser:viewlet
+        name="osha.campaigntoolkit.gotocorporate_viewlet"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.GotocorporateViewlet"
+        template="templates/gotocorporate_viewlet.pt"
+        permission="zope2.View"
+        />
     <!-- marker interfaces -->
     <interface interface=".interfaces.ICanShowToolExamples" />
 

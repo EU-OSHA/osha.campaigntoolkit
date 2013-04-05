@@ -5,3 +5,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 
 class GoogletranslateViewlet(ViewletBase):
     pass
+
+
+class GotocorporateViewlet(ViewletBase):
+    pass
