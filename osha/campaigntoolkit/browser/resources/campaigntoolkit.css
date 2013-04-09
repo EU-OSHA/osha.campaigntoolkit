@@ -4,7 +4,7 @@
 }
 
 body {
-    background: transparent url('++resource++osha.campaigntoolkit.resources/top.gif') repeat-x top left;
+   /* background: url('++resource++osha.campaigntoolkit.resources/top.gif') repeat-x scroll left top transparent; */
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
 
 }
@@ -405,6 +405,10 @@ div#gotocorporate .external-marker{
 #portal-top #searchGadget {
     width: 190px;
 }
+#portal-header {
+    background: url('logoinner.gif') no-repeat scroll 0 17px transparent;
+    height: 150px;
+}
 /*#portal-header:after {
     content: "Campaign Toolkit";
     display:block;
@@ -441,6 +445,11 @@ div#gotocorporate .external-marker{
     color: black;
 }
 
+#visual-portal-wrapper-container{
+    background: transparent url('++resource++osha.campaigntoolkit.resources/top.gif') repeat-x scroll top left;
+    margin: 0 auto;
+    width: 100%;
+}
 
 #visual-portal-wrapper {
     width: 960px;
