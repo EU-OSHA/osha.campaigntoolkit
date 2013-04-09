@@ -78,7 +78,7 @@ div#googletranslate{
 /* back to corporate site */
 div#gotocorporate {
     float:left;
-    margin-top: 2.4em;
+    margin-top: 56px;
     font-size: 80%
 }
 
@@ -405,21 +405,21 @@ div#gotocorporate .external-marker{
 #portal-top #searchGadget {
     width: 190px;
 }
-#portal-header:after {
+/*#portal-header:after {
     content: "Campaign Toolkit";
     display:block;
     text-align:right;
     text-shadow: 0 4px 4px #000;
     margin-top: 106px;
-/*    color: #b1c6ff;*/
+    color: #b1c6ff;
     color: white;
     font-size: 22px;
     font-family: Delicious, Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
     font-style:italic;
     @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); }
-}
+}*/
 #portal-searchbox {
-    padding-top: 16px;
+    padding-top: 36px;
 }
 #portal-searchbox .searchSection {
     visibility: hidden;
