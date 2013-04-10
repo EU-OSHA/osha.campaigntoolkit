@@ -508,6 +508,9 @@ div#gotocorporate .external-marker{
 .navTreeLevel2 a {
     padding-left: 10px;
 }
+.portletNavigationTree{
+border-top: 0.1em dotted #DDDDDD;
+}
 
 .shadow {
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
