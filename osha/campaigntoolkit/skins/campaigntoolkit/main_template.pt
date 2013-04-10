@@ -52,7 +52,7 @@
     tal:attributes="class body_class;
                     dir python:isRTL and 'rtl' or 'ltr'">
 
-<div id="visual-portal-wrapper-container">
+<div id="visual-portal-wrapper-container" class="row">
 <div id="visual-portal-wrapper">
 
         <div id="portal-top"

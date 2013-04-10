@@ -406,7 +406,7 @@ div#gotocorporate .external-marker{
     width: 190px;
 }
 #portal-header {
-    background: url('logoinner.gif') no-repeat scroll 0 17px transparent;
+    background: url('++resource++osha.campaigntoolkit.resources/logoinner.gif') no-repeat scroll 0 17px transparent;
     height: 150px;
 }
 /*#portal-header:after {
