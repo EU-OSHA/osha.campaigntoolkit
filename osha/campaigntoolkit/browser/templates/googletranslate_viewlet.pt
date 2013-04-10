@@ -7,7 +7,9 @@
       new google.translate.TranslateElement({
         pageLanguage: 'en',
         includedLanguages: 'bg,da,de,et,fi,fr,el,ga,it,is,lv,lt,mt,no,nl,pl,pt,ro,sv,sk,sl,es,cs,hu',
-        autoDisplay: false
+        autoDisplay: false,
+        gaTrack: true,
+        gaId: 'UA-9750156-5'
       }, 'google_translate_element');
     }
   </script>
