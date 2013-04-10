@@ -13,6 +13,10 @@ body.template-homepage-view div#portal-column-content{
     width: 600px;
 }
 */
+body.template-homepage-view div#portal-breadcrumbs {
+    display: none;
+}
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
 }
