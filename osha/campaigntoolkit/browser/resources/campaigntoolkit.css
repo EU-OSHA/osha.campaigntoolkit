@@ -387,10 +387,12 @@ div#gotocorporate .external-marker{
     padding: 4px 30px 10px 10px;
     float: left;
     margin-top: 0;
+	margin-left: 10px;
 }
 #portal-top {
-    background: transparent url('++resource++osha.campaigntoolkit.resources/headereurope.gif') no-repeat scroll right 14px;
     padding: 14px 0;
+	background: url('++resource++osha.campaigntoolkit.resources/logoinner.gif') no-repeat scroll 0 29px transparent;
+    
 }
 #portal-top div.width-full {
     width: 99%;
@@ -410,7 +412,7 @@ div#gotocorporate .external-marker{
     width: 190px;
 }
 #portal-header {
-    background: url('++resource++osha.campaigntoolkit.resources/logoinner.gif') no-repeat scroll 0 17px transparent;
+    background: transparent url('++resource++osha.campaigntoolkit.resources/headereurope.gif') no-repeat scroll right 6px;
     height: 150px;
 }
 /*#portal-header:after {
