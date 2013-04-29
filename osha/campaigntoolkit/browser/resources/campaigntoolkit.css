@@ -884,3 +884,9 @@ body.template-toolexamples #highlightsContainer {
 .collapse-head.collapsed {
     background: url('++resource++osha.campaigntoolkit.resources/arrow-down.png') no-repeat center right;
 }
+/* Change request from ticket #6906 Increase readability */
+.template-readmore-view .readmore-item .description {
+    line-height: 25px;
+    font: italic 16px Georgia, "Times New Roman", Times, serif;
+    color: rgb(102, 102, 102);
+}
