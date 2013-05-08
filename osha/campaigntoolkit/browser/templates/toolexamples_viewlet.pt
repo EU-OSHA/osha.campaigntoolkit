@@ -1,8 +1,8 @@
 <div class="examples examples-portlet"
      tal:define="examples view/examples"
      tal:condition="examples">
-    <h3 i18n:translate="label_examples_from_previous_campaigns">
-        Examples from previous campaigns</h3>
+    <h3 i18n:translate="label_examples">
+        Examples</h3>
     <ul id="examplelist">
         <li tal:repeat="item examples">
 
