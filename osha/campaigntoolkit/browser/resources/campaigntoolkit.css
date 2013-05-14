@@ -16,6 +16,8 @@ body.template-homepage-view div#portal-column-content{
 body.template-homepage-view div#portal-breadcrumbs {
     display: none;
 }
+body.template-homepage-view .documentFirstHeading {
+  font-size: 2em;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Helvetica, "Lucida Grande", Lucida, Arial, sans-serif;
@@ -601,7 +603,7 @@ body.section-front-page h1.documentFirstHeading {
 
 #highlights h2, #in-focus-container h2{
     background: #c5cbd8;
-    font-size: 0.85em;
+    font-size: 1.2em;
     border-bottom: 0;
     padding: 0.5em 1em;
     margin:0;
