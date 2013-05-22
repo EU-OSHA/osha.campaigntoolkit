@@ -4,8 +4,7 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- changes to show the logo correctly on several platforms [erral]
 
 1.0.3 (2013-05-16)
 ------------------
