@@ -388,6 +388,7 @@ div#gotocorporate .external-marker{
     background: url('++resource++osha.campaigntoolkit.resources/logoinner2.gif') no-repeat scroll right bottom white;
     padding: 4px 30px 10px 10px;
     float: left;
+	display: block;
     margin-top: 0;
 	margin-left: 10px;
 }
