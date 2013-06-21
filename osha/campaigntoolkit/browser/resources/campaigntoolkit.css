@@ -395,7 +395,7 @@ div#gotocorporate .external-marker{
 #portal-top {
     padding: 14px 0;
 	background: url('++resource++osha.campaigntoolkit.resources/logoinner.gif') no-repeat scroll 0 29px transparent;
-    
+
 }
 #portal-top div.width-full {
     width: 99%;
@@ -636,12 +636,13 @@ body.section-front-page h1.documentFirstHeading {
     color: #fff;
     font-weight: bold;
     font-size: 1.2em;
-    text-shadow:2px 2px 2px #999;
-     background:#c5cbd8;
+    text-shadow: 2px 2px 2px #999;
+    background: #c5cbd8;
     padding: 0.1em 0.8em;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    cursor: pointer;
 }
 
 #highlights-tabs li:hover a{
