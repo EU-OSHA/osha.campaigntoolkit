@@ -586,7 +586,7 @@ body.section-front-page h1.documentFirstHeading {
 #highlights{
     border: 1px solid #c5cbd8;
     padding-bottom: 2.5em;
-    height: 320px;
+    height: 340px;
 }
 
 #highlightsContainer {
@@ -598,8 +598,8 @@ body.section-front-page h1.documentFirstHeading {
 }
 
 #highlights-content {
-    height: 270px;
-    margin-bottom: 20px;
+    height: 290px;
+    margin-bottom: 15px;
 }
 
 #highlights h2, #in-focus-container h2{
@@ -623,7 +623,7 @@ body.section-front-page h1.documentFirstHeading {
     list-style: none;
     float: right;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 0.5em 0.5em 0;
+    margin: 0 1em 0.5em 0;
 }
 
 #highlights-tabs li.ui-corner-top {
