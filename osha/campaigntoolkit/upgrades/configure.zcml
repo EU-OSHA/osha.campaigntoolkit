@@ -39,4 +39,13 @@
       handler=".upgrade_004_to_005.upgrade"
       />
 
+  <genericsetup:upgradeStep
+      source="005"
+      destination="006"
+      title="Upgrade from version 005 to version 006"
+      description="Add password policy and failed login lockout"
+      profile="osha.campaigntoolkit:default"
+      handler=".upgrade_005_to_006.upgrade"
+      />
+
 </configure>

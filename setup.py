@@ -29,6 +29,8 @@ setup(name='osha.campaigntoolkit',
           'plone.api',
           'plone.app.dexterity [grok]',
           'z3c.jbot',
+          'Products.LoginLockout',
+          'Products.PasswordStrength',
       ],
       extras_require={
           # list libs needed for testing this project
