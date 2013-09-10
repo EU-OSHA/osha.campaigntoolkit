@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="mobile_properties" meta_type="Plone Property Sheet" title="Mobile site specific settings">
+
+  <!-- Don't show mobile skin on iPad -->
+  <property name="exclude_user_agents" type="string">ipad</property>
+
+ </object>
+</object>
