@@ -1,3 +1,37 @@
+/* Links */
+
+#content a:link,
+dl.portlet a:link {
+    color: #003399;
+    border-bottom: 0.1em solid #003399;
+}
+
+dl.portlet a:visited {
+    color: #003399;
+    border-bottom: 0.1em solid #003399;
+}
+#content a:visited {
+    color: #668899;
+    border-bottom: 0.1em solid #668899;
+}
+
+#content a:hover,
+dl.portlet a:hover {
+    text-decoration: none;
+}
+#content a:target {
+    background-color: #ffb;
+}
+
+.sublist{
+    margin-left: 3em;
+    font-style: italic;
+}
+
+.sublist a {
+    margin-right: 0.5em;
+}
+
 /* Button http://webdesignerwall.com/tutorials/css3-gradient-buttons */
 
 .button {
