@@ -88,6 +88,7 @@
                             </metal:bodytext>
 
                             <div id="viewlet-below-content" tal:content="structure context/@@viewlets/osha.campaigntoolkit.toolexamples_highlights_viewlet" tal:condition="not:ajax_load" />
+                            <div id="viewlet-below-content" tal:content="structure context/@@viewlets/osha.campaigntoolkit.toolexamples_viewlet" tal:condition="not:ajax_load" />
                                 
                         </div>
                     </metal:slot>
