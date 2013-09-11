@@ -51,8 +51,8 @@
   <genericsetup:upgradeStep
       source="006"
       destination="007"
-      title="Upgrade from version 005 to version 006"
-      description="Install gomobile"
+      title="Upgrade from version 006 to version 007"
+      description="Install and configure gomobile"
       profile="osha.campaigntoolkit:default"
       handler=".upgrade_006_to_007.upgrade"
       />
