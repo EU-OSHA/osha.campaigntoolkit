@@ -1,0 +1,4 @@
+<div id="footer-text" i18n:domain="gomobiletheme.basic">
+    <div tal:replace="structure context/@@viewlets/plone.site_actions" />
+</div>
+

@@ -34,3 +34,17 @@ class Logo(gomobileviewlets.Logo):
 
     def getLogoPath(self):
         return "++resource++osha.campaigntoolkit.resources/logo.gif"
+
+
+class FooterText(gomobileviewlets.FooterText):
+    grok.template('footertext')
+    grok.layer(IMobileCampaignToolkitLayer)
+    grok.context(Interface)
+    grok.viewletmanager(gomobileviewlets.MainViewletManager)
+
+
+class Header(gomobileviewlets.Header):
+    grok.template('header')
+    grok.layer(IMobileCampaignToolkitLayer)
+    grok.context(Interface)
+    grok.viewletmanager(gomobileviewlets.MainViewletManager)
