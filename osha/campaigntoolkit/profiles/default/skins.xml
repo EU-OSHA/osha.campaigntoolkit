@@ -5,6 +5,9 @@
  <object name="campaigntoolkit" meta_type="Filesystem Directory View"
          directory="osha.campaigntoolkit:skins/campaigntoolkit"/>
 
+ <object name="campaigntoolkitmobile" meta_type="Filesystem Directory View"
+         directory="osha.campaigntoolkit:skins/campaigntoolkitmobile"/>
+
 
  <skin-path name="Campaign Toolkit" based-on="Sunburst Theme">
   <layer name="campaigntoolkit"
