@@ -49,3 +49,18 @@
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#003399', endColorstr='#999ada');
 }
 
+/* collapsible */
+.readmore-item {
+    margin-bottom: 1.5em; /* different margin for mobile */
+}
+.readmore-item .description {
+    padding-bottom: 0em;
+    margin-bottom: 0.1em; /* different margin for mobile */
+}
+.collapse-head {
+    background: url('++resource++osha.campaigntoolkit.resources/arrow-up.png') no-repeat center right;
+    padding-right: 1em;
+}
+.collapse-head.collapsed {
+    background: url('++resource++osha.campaigntoolkit.resources/arrow-down.png') no-repeat center right;
+}
