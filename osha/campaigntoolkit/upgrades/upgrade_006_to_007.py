@@ -16,6 +16,10 @@ def upgrade(context):
             logger.info("Installing Products.%s" % product)
             qi.installProduct(product)
 
-    # Load mobile_properties
+    # Load mobile skin and mobile_properties
+    context.runImportStepFromProfile(
+        'profile-osha.campaigntoolkit:default', 'browserlayer')
+    context.runImportStepFromProfile(
+        'profile-osha.campaigntoolkit:default', 'skins')
     context.runImportStepFromProfile(
         'profile-osha.campaigntoolkit:default', 'propertiestool')

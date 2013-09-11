@@ -3,4 +3,8 @@
     name="osha.campaigntoolkit"
     interface="osha.campaigntoolkit.browser.interfaces.ICampaignToolkitLayer"
   />
+  <layer
+    name="osha.campaigntoolkitmobile"
+    interface="osha.campaigntoolkit.browser.interfaces.IMobileCampaignToolkitLayer"
+  />
 </layers>

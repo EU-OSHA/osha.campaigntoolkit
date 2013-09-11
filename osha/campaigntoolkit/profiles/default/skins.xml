@@ -11,4 +11,9 @@
      insert-after="custom"/>
  </skin-path>
 
+ <skin-path name="Campaign Toolkit Mobile" based-on="Go Mobile Default Theme">
+  <layer name="osha.campaigntoolkitmobile"
+     insert-after="custom"/>
+ </skin-path>
+
 </object>
