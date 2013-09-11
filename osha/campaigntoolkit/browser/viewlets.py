@@ -7,7 +7,7 @@ from zope.interface import Interface
 
 from osha.campaigntoolkit.browser.interfaces import IMobileCampaignToolkitLayer
 
-grok.templatedir("templates")
+grok.templatedir("templates_mobile")
 
 
 class GoogletranslateViewlet(ViewletBase):
