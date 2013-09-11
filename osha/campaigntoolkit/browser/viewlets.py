@@ -18,8 +18,19 @@ class GotocorporateViewlet(ViewletBase):
     pass
 
 
+# Mobile viewlets
+
 class AdditionalHead(gomobileviewlets.AdditionalHead):
     grok.template('additionalhead')
     grok.layer(IMobileCampaignToolkitLayer)
     grok.context(Interface)
     grok.viewletmanager(gomobileviewlets.MainViewletManager)
+
+
+class Logo(gomobileviewlets.Logo):
+    grok.layer(IMobileCampaignToolkitLayer)
+    grok.context(Interface)
+    grok.viewletmanager(gomobileviewlets.MainViewletManager)
+
+    def getLogoPath(self):
+        return "++resource++osha.campaigntoolkit.resources/logo.gif"
