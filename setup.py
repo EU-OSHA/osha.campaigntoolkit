@@ -31,6 +31,7 @@ setup(name='osha.campaigntoolkit',
           'z3c.jbot',
           'Products.LoginLockout',
           'Products.PasswordStrength',
+          'mfabrik.webandmobile',
       ],
       extras_require={
           # list libs needed for testing this project

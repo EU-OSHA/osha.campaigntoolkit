@@ -4,7 +4,14 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+Upgrade notes
+~~~~~~~~~~~~~
+
+There is an upgrade step that installs the relevant gombile packages and loads
+custom settings. It may be necessary to manually exclude some items such as
+images from the mobile navigation to avoid duplication.
+
+- added mobile skin [reinhardt]
 
 
 1.0.4 (2013-05-22)
