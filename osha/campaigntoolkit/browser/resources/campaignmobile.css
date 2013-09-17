@@ -220,6 +220,9 @@ ul#highlights-tabs {
     padding-left: 2%;
 }
 
+.back .back-text{
+    max-width: 360px;
+}
 
 /*************************************Maite changes highend **********************************************/
 
