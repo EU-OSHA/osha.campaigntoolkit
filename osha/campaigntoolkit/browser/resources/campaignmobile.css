@@ -219,3 +219,72 @@ ul#highlights-tabs {
 #infocus-2, #infocus-4{
     padding-left: 2%;
 }
+
+
+/*************************************Maite changes highend **********************************************/
+
+
+#gotocorporate{
+background-image: -moz-linear-gradient(top, #EEE, #CCC);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#CCC));
+    padding: 5px 10px;
+}
+#actions-header {
+    background: #b9d428;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+#infocus-1, #infocus-3 {
+   margin-bottom: 2em;;
+}
+
+#in-focus img {
+    margin: 0 0 0.5em 0.5em;
+    float: right;
+    width: 100px;
+}
+
+#in-focus h3 {
+    margin-top:1em !important;
+
+}
+
+#highlights img {
+    float: left !important;
+    margin: 1em 1em 0 0 !important;
+}
+
+#highlightsContainer {
+    font-size: 100% !important;
+}
+
+#highlights h3 {
+    font-size: 1.1em !important;
+}
+
+#highlights-tabs li a {
+    padding: 0.4em 1.2em !important;
+}
+
+.visualClear {
+    clear: both;
+}
+
+#content a:link, dl.portlet a:link {
+    border-bottom: 0 !important;
+}
+
+#search-box-top {
+    background-image: -moz-linear-gradient(top, #e4e4e4, #909090);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e4e4e4), to(#909090));
+}
+
+
+@media (max-width: 480px) {
+#mobile-site-actions img{
+    width: 70%;
+
+}
+}
+
