@@ -4,7 +4,7 @@ import logging
 log = logging.getLogger(__name__)
 
 
-def _setup_password_policy(portal):
+def _setup_password_policy(context=None):
     acl_users = api.portal.get_tool('acl_users')
     if not acl_users.objectIds('Password Strength Plugin'):
         setup = api.portal.get_tool('portal_setup')
@@ -32,5 +32,4 @@ def _setup_password_policy(portal):
 def setup_password_policy(context):
     if context.readDataFile('osha.campaigntoolkit.marker.txt') is None:
         return
-    portal = context.getSite()
-    _setup_password_policy(portal)
+    _setup_password_policy()
