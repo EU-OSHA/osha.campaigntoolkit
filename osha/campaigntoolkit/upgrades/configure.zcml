@@ -57,4 +57,13 @@
       handler=".upgrade_006_to_007.upgrade"
       />
 
+  <genericsetup:upgradeStep
+      source="*"
+      destination="008"
+      title="Upgrade to version 008"
+      description="Install and configure PasswordStrength"
+      profile="osha.campaigntoolkit:default"
+      handler="..setuphandlers._setup_password_policy"
+      />
+
 </configure>

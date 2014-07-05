@@ -45,4 +45,11 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:importStep
+      name="osha.campaigntoolkit.passwordpolicy"
+      title="Install PasswordStrength policy"
+      description=""
+      handler="osha.campaigntoolkit.setuphandlers.setup_password_policy"
+      />
+
 </configure>
