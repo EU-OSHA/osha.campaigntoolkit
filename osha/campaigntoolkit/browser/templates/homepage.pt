@@ -40,14 +40,14 @@
         <h2>Getting your message across</h2>
         <div class="in-focus" id="in-focus">
             <div id="infocus-1">
-                <img src="++resource++osha.campaigntoolkit.resources/knot.jpg" width="150" title="Very likely copyrighted, not to use in production">
+                <img src="++resource++osha.campaigntoolkit.resources/knot.jpg" width="150" title="How to run a campaign" alt="Campaign Toolkit logo">
                 <h3><a rel="nofollow" href="how-to-run-a-campaign">How to run a campaign</a></h3>
                 <p>So you want to make a difference by campaigning for better workplace safety and health.
                   Learn how to make your project successful.</p>
                 <p><a rel="nofollow" href="how-to-run-a-campaign">More&hellip;</a></p>
             </div>
             <div id="infocus-2">
-                <img src="++resource++osha.campaigntoolkit.resources/tools.jpg" width="150" title="Very likely copyrighted, not to use in production">
+                <img src="++resource++osha.campaigntoolkit.resources/tools.jpg" width="150" title="Tools" alt="Image of coloured pencils">
                 <h3><a rel="nofollow" href="tools">Tools</a></h3>
                 <p>Explore a collection of campaign tools and real world examples.
                   All you need to run an effective promotional campaign is a click ahead.</p>
