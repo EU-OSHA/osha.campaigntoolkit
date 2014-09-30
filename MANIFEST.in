@@ -2,3 +2,20 @@ recursive-include main_directory *
 recursive-include docs *
 include *
 global-exclude *.pyc
+
+# added by check_manifest.py
+recursive-include osha *.css
+recursive-include osha *.eot
+recursive-include osha *.gif
+recursive-include osha *.jpg
+recursive-include osha *.js
+recursive-include osha *.otf
+recursive-include osha *.png
+recursive-include osha *.po
+recursive-include osha *.pot
+recursive-include osha *.props
+recursive-include osha *.pt
+recursive-include osha *.py
+recursive-include osha *.txt
+recursive-include osha *.xml
+recursive-include osha *.zcml
