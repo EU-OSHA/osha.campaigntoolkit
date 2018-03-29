@@ -1,0 +1,36 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
+
+    <browser:page
+        for="*"
+        name="export_documents"
+        class=".document.DocumentExporter"
+        permission="cmf.ManagePortal"
+        />
+
+    <browser:page
+        for="*"
+        name="export_files"
+        class=".file.FileExporter"
+        permission="cmf.ManagePortal"
+        />
+
+    <browser:page
+        for="*"
+        name="export_images"
+        class=".image.ImageExporter"
+        permission="cmf.ManagePortal"
+        />
+
+    <browser:page
+        for="*"
+        name="export_toolexamples"
+        class=".toolexample.ToolexampleExporter"
+        permission="cmf.ManagePortal"
+        />
+
+
+
+</configure>

@@ -32,6 +32,7 @@ setup(name='osha.campaigntoolkit',
           'Products.LoginLockout',
           'Products.PasswordStrength',
           'mfabrik.webandmobile',
+          'ordereddict',
       ],
       extras_require={
           # list libs needed for testing this project
